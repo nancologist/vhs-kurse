@@ -36,3 +36,20 @@
     * Grab comments
 
 * Berliner Hochschulkursen : https://daten.berlin.de/datensaetze/kurse-der-berliner-volkshochschulen
+___
+___
+___
+
+# Project: Berliner Kurse
+
+# 0. Details
+* Anzahl der Datensätze : 1877
+
+# 1. Report
+
+## 1.1. Bearbeitung der Rohdaten
+Wegen einer Schlüssel in den JSON-Rohdaten von der Quelle, der ``"#test"`` (siehe in ``sample-raw.json``) lautet mussten alle 1877 Datensätze bearbeitet werden. 
+
+Die Formattierung des obengenannten Schlüssels ist bei der angewendeten Datenbank (Firebase) nicht gültig.
+
+Da dieser Schlüsser und deren Eltern keine große Rolle in der Applikation spielen wurden sie aus den Datensätzen gelöscht. 
