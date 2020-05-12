@@ -6,6 +6,10 @@
         "nummer": "TS507.041F",
         "name": "EDV - Lohn- und Gehaltsabrechnung mit DATEV",
         "untertitel": "Lohn (3) Xpert Business - Bildungsurlaub",
+        "dvv_kategorie": {
+          "@version": "1.0",
+          "#text": "5.02"
+        },
         "minimale_teilnehmerzahl": "7",
         "maximale_teilnehmerzahl": "14",
         "anzahl_termine": "40",
