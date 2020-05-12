@@ -34,3 +34,5 @@
     * Grab Playlist
     * Search
     * Grab comments
+
+* Berliner Hochschulkursen : https://daten.berlin.de/datensaetze/kurse-der-berliner-volkshochschulen
