@@ -1,4 +1,8 @@
 {
+  "veranstaltungen": {
+    "veranstaltung": [
+
+{
   "guid": "531327",
   "nummer": "TS507.041F",
   "name": "EDV - Lohn- und Gehaltsabrechnung mit DATEV",
@@ -53,3 +57,5 @@
     "uri": "http://www.vhsit.berlin.de/VHSKURSE/BusinessPages/CourseDetail.aspx?id=531327"
   }
 }
+
+    ]}}
