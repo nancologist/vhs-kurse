@@ -1,61 +1,61 @@
 {
   "veranstaltungen": {
     "veranstaltung": [
-
-{
-  "guid": "531327",
-  "nummer": "TS507.041F",
-  "name": "EDV - Lohn- und Gehaltsabrechnung mit DATEV",
-  "untertitel": "Lohn (3) Xpert Business - Bildungsurlaub",
-  "dvv_kategorie": {
-    "@version": "1.0",
-    "#text": "5.02"
-  },
-  "minimale_teilnehmerzahl": "7",
-  "maximale_teilnehmerzahl": "14",
-  "anzahl_termine": "40",
-  "beginn_datum": "2020-05-11",
-  "ende_datum": "2020-05-15",
-  "zielgruppe": null,
-  "schlagwort": [
-    "ARBEIT-BERUF-EDV",
-    "Beruf",
-    "Bildungsurlaub",
-    "EDV",
-    "Lohn",
-    "RECHNUNGSWESEN",
-    "Xpert"
-  ],
-  "text": [
-    {
-      "eigenschaft": "Beschreibung",
-      "text": "Zugangsvoraussetzungen: Grundkenntnisse der Lohn-/Gehaltsabrechnung sowie Windows-Kenntnisse\r\nDer Kurs befähigt Sie, Ihre theoretischen Kenntnisse in der EDV-gestützten Lohnabrechnung anzuwenden.\r\nKursinhalte: Anlage, Pflege und Korrektur von Stammdaten - Erstellen von Entgeltabrechnungen mit festen und variablen Lohnarten, darunter Sachbezüge und Einmalzahlungen - Entgeltabrechnungen für besondere Personenkreise (z. B. Geringverdienende, Teilzeit- und Aushilfsbeschäftigte, Studierende, Altersrentner und Altersrentnerinnen) - Erstellen von Korrekturabrechnungen - Auswertungen, Listen und Abschlüsse.\r\nIm Kurs wird mit der Software 'Lohn und Gehalt comfort' von DATEV gearbeitet.\r\nDer Kurs befähigt zur Teilnahme an der Xpert Business-Prüfung\r\nLernzielkatalog im Internet unter: \r\nhttp://www.xpert-business.eu/de/lernzielkataloge/index.html\r\n"
-    },
-    {
-      "eigenschaft": "Zusatzinformation",
-      "text": "Bitte zum ersten Kurstag das aktuelle Lehrbuch mitbringen: 'Lohn und Gehalt \r\nmit DATEV - Mit Übungen und Musterklausuren, Edu-Media-Verlag\r\n\r\n"
-    }
-  ],
-  "veranstaltungsort": {
-    "name": "Schöneberg, VHS",
-    "adresse": {
-      "land": "Deutschland",
-      "plz": "10781",
-      "ort": "Berlin",
-      "strasse": "Barbarossaplatz 5"
-    },
-    "barrierefrei": "true"
-  },
-  "preis": {
-    "betrag": "126.20",
-    "rabatt_moeglich": "true",
-    "zusatz": "erm. Preis: 65,60 EUR"
-  },
-  "webadresse": {
-    "typ": "website",
-    "name": "zur Kursbuchung",
-    "uri": "http://www.vhsit.berlin.de/VHSKURSE/BusinessPages/CourseDetail.aspx?id=531327"
+      {
+        "guid": "531327",
+        "nummer": "TS507.041F",
+        "name": "EDV - Lohn- und Gehaltsabrechnung mit DATEV",
+        "untertitel": "Lohn (3) Xpert Business - Bildungsurlaub",
+        "dvv_kategorie": {
+          "@version": "1.0",
+          "#text": "5.02"
+        },
+        "minimale_teilnehmerzahl": "7",
+        "maximale_teilnehmerzahl": "14",
+        "anzahl_termine": "40",
+        "beginn_datum": "2020-05-11",
+        "ende_datum": "2020-05-15",
+        "zielgruppe": null,
+        "schlagwort": [
+          "ARBEIT-BERUF-EDV",
+          "Beruf",
+          "Bildungsurlaub",
+          "EDV",
+          "Lohn",
+          "RECHNUNGSWESEN",
+          "Xpert"
+        ],
+        "text": [
+          {
+            "eigenschaft": "Beschreibung",
+            "text": "Zugangsvoraussetzungen: Grundkenntnisse der Lohn-/Gehaltsabrechnung sowie Windows-Kenntnisse\r\nDer Kurs befähigt Sie, Ihre theoretischen Kenntnisse in der EDV-gestützten Lohnabrechnung anzuwenden.\r\nKursinhalte: Anlage, Pflege und Korrektur von Stammdaten - Erstellen von Entgeltabrechnungen mit festen und variablen Lohnarten, darunter Sachbezüge und Einmalzahlungen - Entgeltabrechnungen für besondere Personenkreise (z. B. Geringverdienende, Teilzeit- und Aushilfsbeschäftigte, Studierende, Altersrentner und Altersrentnerinnen) - Erstellen von Korrekturabrechnungen - Auswertungen, Listen und Abschlüsse.\r\nIm Kurs wird mit der Software 'Lohn und Gehalt comfort' von DATEV gearbeitet.\r\nDer Kurs befähigt zur Teilnahme an der Xpert Business-Prüfung\r\nLernzielkatalog im Internet unter: \r\nhttp://www.xpert-business.eu/de/lernzielkataloge/index.html\r\n"
+          },
+          {
+            "eigenschaft": "Zusatzinformation",
+            "text": "Bitte zum ersten Kurstag das aktuelle Lehrbuch mitbringen: 'Lohn und Gehalt \r\nmit DATEV - Mit Übungen und Musterklausuren, Edu-Media-Verlag\r\n\r\n"
+          }
+        ],
+        "veranstaltungsort": {
+          "name": "Schöneberg, VHS",
+          "adresse": {
+            "land": "Deutschland",
+            "plz": "10781",
+            "ort": "Berlin",
+            "strasse": "Barbarossaplatz 5"
+          },
+          "barrierefrei": "true"
+        },
+        "preis": {
+          "betrag": "126.20",
+          "rabatt_moeglich": "true",
+          "zusatz": "erm. Preis: 65,60 EUR"
+        },
+        "webadresse": {
+          "typ": "website",
+          "name": "zur Kursbuchung",
+          "uri": "http://www.vhsit.berlin.de/VHSKURSE/BusinessPages/CourseDetail.aspx?id=531327"
+        }
+      }
+    ]
   }
 }
-
-    ]}}
