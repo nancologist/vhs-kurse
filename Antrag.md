@@ -47,12 +47,16 @@ Dazu werden im Projekt die folgenden Frameworks und Services verwendet:
 * Konzeption der Schnittstelle zwischen Frontend & Backend (5 Stunden)
 
 * Konzeption des Suchsystems und dessen Filter (5 Stunden)
+    * Forschen und Ispiration von großen und erfolgreichen Webseiten für die Auswahl der Filter (3 Stunden)
+    * Vernünftige Aufteilung der Konzepten zwischen Frontend und Backend (2 Stunden)
 
 * Entwicklung der UI (8 Stunden)
     * Entwicklung der React Komponenten und deren States (5 Stunden)    
     * Styling der Komponenten (3 Stunden)
 
 * Entwicklung und Implementation der Suchlogik (10 Stunden)
+    * Backend Impl 5 Stunden ... jaklfjalkfjaöfj
+    * Frontend Imp 5 Stunden ...jfkajfajöklfj
 
 * Erarbeiten welche Plug-Ins gebraucht werden (5 Stunden)
 
