@@ -14,7 +14,7 @@ Da es gegen 2000 Kurse durch die Volkshochschulen in Berlin angeboten werden, es
 Das Suchsysstem in der Anwendung sollte die Komplikation der Suche nach einem Kurs durch die wichtigen und nützlichen Filtern vereinfachen und optimieren.
 
 Dazu werden im Projekt die folgenden Frameworks und Services verwendet:
-* Google Firebase (Datenbank, Backend und zum Deployment)
+* Google Firebase (NoSQL Datenbank, Backend und zum Deployment)
 * React(JS), CSS, HTML (Frontend und UI)
 * Redux : Als State-Manager für React
 * Axios: die Bibliothek für Ajax Requests
