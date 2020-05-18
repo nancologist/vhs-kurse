@@ -1,21 +1,24 @@
 # Projektantrag: Kurse der Berliner Volkshochschule
 
 # 1. Projektbezeichnung
-Kurse der Berliner Volkshochschule
+_Kurse der Berliner Volkshochschule_
   
-Quelle: https://daten.berlin.de/datensaetze/kurse-der-berliner-volkshochschulen
+Die Quelle: https://daten.berlin.de/datensaetze/kurse-der-berliner-volkshochschulen
 
 # 2. Kurzform der Aufgabenstellung
-Ein Suchsystem mit den notwendigen Filtern entwickeln, was die Suche nach den angebotenen Berliner Volkshochschulkursen für die Berlinerinnen und Berliner vereinfacht.
+Ein Suchsystem mit den notwendigen Filtern entwickeln, das die Suche nach den angebotenen Berliner Volkshochschulkursen für die Berlinerinnen und Berliner vereinfacht.
 
 # 3. Zielsetzung - Was soll am Ende des Projektes erreicht werden?
-Da es gegen 2000 Kurse durch die Volkshochschulen in Berlin angeboten werden, es ist schwierig der passende Kurs in einer langen List für sich zu finden.
+Da es gegen 2000 Kurse durch die Volkshochschulen in Berlin angeboten werden, es ist schwierig den passenden Kurs in einer langen List für sich zu finden.
 
 Das Suchsysstem in der Anwendung sollte die Komplikation der Suche nach einem Kurs durch die wichtigen und nützlichen Filtern vereinfachen und optimieren.
 
 Dazu werden im Projekt die folgenden Frameworks und Services verwendet:
 * Google Firebase (Datenbank, Backend und zum Deployment)
 * React(JS), CSS, HTML (Frontend und UI)
+* Redux : Als State-Manager für React
+* Axios: die Bibliothek für Ajax Requests
+* Validator : Zur Kontrolle der Formulare und Eingaben des Users
 
 # 4. Projektstrukturplan 
 
