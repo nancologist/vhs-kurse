@@ -55,8 +55,8 @@ Dazu werden im Projekt die folgenden Frameworks und Services verwendet:
     * Styling der Komponenten (3 Stunden)
 
 * Entwicklung und Implementation der Suchlogik (10 Stunden)
-    * Backend Impl 5 Stunden ... jaklfjalkfjaöfj
-    * Frontend Imp 5 Stunden ...jfkajfajöklfj
+    * Backend Impl 5 Stunden
+    * Frontend Imp 5 Stunden
 
 * Erarbeiten welche Plug-Ins gebraucht werden (5 Stunden)
 

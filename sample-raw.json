@@ -47,7 +47,7 @@
         },
         "preis": {
           "betrag": "126.20",
-          "rabatt_moeglich": "true",
+          "rabatt_moeglich": "fasle",
           "zusatz": "erm. Preis: 65,60 EUR"
         },
         "webadresse": {

@@ -1,4 +1,4 @@
-# Fake-Abschlussprojekt
+# Kurse der Berliner Volkshochschulen - KBV (Fake-Abschlussprojekt)
 
 # 1. Ideen
 ## 1.1. Liste der optimalen APIs und Json-Dateien
@@ -53,3 +53,57 @@ Wegen einer Schlüssel in den JSON-Rohdaten von der Quelle, der ``"#test"`` (sie
 Die Formattierung des obengenannten Schlüssels ist bei der angewendeten Datenbank (Firebase) nicht gültig.
 
 Da dieser Schlüsser und deren Eltern keine große Rolle in der Applikation spielen wurden sie aus den Datensätzen gelöscht. 
+
+## 1.2. Datenanalyse
+Ich werde prüfen welche Attributen und Daten in jedem Kurs verfügbar ist.
+
+# 1.3. Components
+
+## 1.3.1. Applikationsbaumstruktur:
+```
+app: 
+{
+    layout: 
+    {
+        cards: 
+        {
+            card   
+        },
+
+        nav: 
+        {
+           navItems    
+        },
+
+        search: 
+        {
+               
+        },
+
+        advSearch: 
+        {
+               
+        },
+    }
+}
+```
+
+
+
+## 1.3.2. UI Components
+ 
+___
+
+# 2. Implementierung (Tickets)
+
+
+## 2.1. Allgemeiner Entwurf
+* erste CMPs anlegen
+
+## 2.2. Zehn zufällige Kurse auf der Homeseite
+* Cards & Card anlegen
+* Logic für den Zufall
+___
+
+## 2.999. Extras
+* Cart and Order CMP For Users
