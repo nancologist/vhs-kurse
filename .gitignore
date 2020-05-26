@@ -3,8 +3,9 @@
 
 ### Firebase ###
 .idea
-**/node_modules/*
+**/node_modules/
 **/.firebaserc
+vhs-kurse/node_modules
 
 ### Firebase Patch ###
 .runtimeconfig.json
