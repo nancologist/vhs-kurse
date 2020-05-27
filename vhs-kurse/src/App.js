@@ -28,6 +28,8 @@ class App extends Component {
     };
 
     render() {
+        const course = this.state.course;
+
         return (
             <div className={styles.App}>
                 {/* Header */}
@@ -36,7 +38,10 @@ class App extends Component {
 
                 <main>
                     <Course
-
+                        id={course.id}
+                        title={course.title}
+                        desc={course.desc}
+                        price={course.price}
                     />
                 </main>
             </div>
