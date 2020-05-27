@@ -10,8 +10,8 @@ class App extends Component {
     };
 
     componentDidMount() {
-        axios.get('https://vhs-kurse.firebaseio.com/veranstaltungen/veranstaltung.json')
-            .then(data => console.log(data));
+        axios.get('https://vhs-kurse.firebaseio.com/veranstaltungen/veranstaltung.json?orderBy="$key"&limitToFirst=5')
+            .then(res => this.setState({courses: res.data}));
     }
 
     render() {
