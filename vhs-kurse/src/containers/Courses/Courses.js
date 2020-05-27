@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import Course from "../../components/Course/Course";
+import CourseCard from "../../components/Course/CourseCard";
 import axios from "axios";
 
 class Courses extends Component {
@@ -17,7 +17,7 @@ class Courses extends Component {
             this.state.courses.map(course => {
                 const desc = course.text.find(text => text.eigenschaft === 'Beschreibung').text;
                 return (
-                    <Course
+                    <CourseCard
                         key={course.guid}
                         id={course.guid}
                         title={course.name}

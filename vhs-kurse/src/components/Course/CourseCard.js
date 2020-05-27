@@ -1,16 +1,20 @@
 import React from "react";
-import Styles from './Course.module.css';
+import Styles from './CourseCard.module.css';
 
-const Course = (props) => {
+const CourseCard = (props) => {
     return (
         <div className={Styles.Card}>
             <h3>{props.title} <small>#{props.id}</small></h3>
             <p>{props.caption}</p>
             <strong>{props.price} €</strong>
+            <div>
+                <button></button>
+                
+            </div>
         </div>
     );
 };
 
-export default Course;
+export default CourseCard;
 
 // TODO: Add Image to Course. (Maybe using Fontawesome!)
