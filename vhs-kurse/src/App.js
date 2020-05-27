@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Course from './components/Courses/Course/Course';
 import styles from './App.module.css';
+import Courses from "./components/Courses/Courses";
 
 class App extends Component {
     state = {
@@ -21,8 +22,6 @@ class App extends Component {
     };
 
     render() {
-        const courses = this.state.courses;
-
         return (
             <div className={styles.App}>
                 {/* Header */}
@@ -30,17 +29,9 @@ class App extends Component {
                 {/* SideDrawer */}
 
                 <main>
-                    {
-                        courses.map(course => (
-                            <Course
-                                key={course.id}
-                                id={course.id}
-                                title={course.title}
-                                desc={course.desc}
-                                price={course.price}
-                            />
-                        ))
-                    }
+                    <Courses
+                        courses={this.state.courses}
+                    />
                 </main>
             </div>
         );
