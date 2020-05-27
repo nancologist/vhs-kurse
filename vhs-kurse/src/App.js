@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 
 import styles from './App.module.css';
-import Courses from "./components/Courses/Courses";
+import Courses from "./containers/Courses/Courses";
 
 class App extends Component {
     state = {
