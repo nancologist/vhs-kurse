@@ -9,7 +9,7 @@ const CourseCard = (props) => {
             <strong>{props.price} €</strong>
             <div>
                 <button></button>
-                
+            {/* Add "Detail"-btn and "Add-to-Cart"-icon/btn */}
             </div>
         </div>
     );

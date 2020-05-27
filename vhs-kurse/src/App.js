@@ -1,21 +1,12 @@
-import React, {Component} from 'react';
-import axios from 'axios';
-
-import styles from './App.module.css';
-import Courses from "./containers/Courses/Courses";
+import React, {Component, Fragment} from 'react';
+import Layout from './hoc/Layout/Layout';
 
 class App extends Component {
     render() {
         return (
-            <div className={styles.App}>
-                {/* Header */}
-
-                {/* SideDrawer */}
-
-                <main>
-                    <Courses/>
-                </main>
-            </div>
+            <Layout>
+                {/* ROUTES... */}
+            </Layout>
         );
     }
 }
