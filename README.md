@@ -95,15 +95,38 @@ app:
 ___
 
 # 2. Implementierung (Tickets)
+## TODO 
+* __Priority: High:__
+    * Big Showcase as homepage!!!
+    * Add Header-Cmp
+    * Style the course-cards.
+    * Add Routes ('/home', '/courses')
+    * Add Search Side-Drawer.
+    * Add "Load-More" BTN : So when the User clicks on it, 5 more courses get loaded.
 
+* __Priority: Low__
+    * Add Images to course-cards
+    * Add Logo
 
-## 2.1. Allgemeiner Entwurf
-* erste CMPs anlegen
-
-## 2.2. Zehn zufällige Kurse auf der Homeseite
+## DONE
+* Create primary cmps.
 * Cards & Card anlegen
-* Logic für den Zufall
 ___
 
 ## 2.999. Extras
-* Cart and Order CMP For Users
+* Cart cmp and Order cmp For Users (so that they can add the Courses into the Cart and then Order them)
+___
+
+# 3. Designs
+
+![Design 01](./bilder/design-inspiration-01.png)
+
+BEST Of https://visme.co/blog/website-color-schemes/ :
+
+* Number 24
+* Number 48
+
+___
+
+# 99. Quellen
+* https://unsplash.com/
