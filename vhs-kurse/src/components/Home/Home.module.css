@@ -6,10 +6,16 @@
     height: 100vh;
 }
 
+.coverDarkener {
+    background-color: rgba(92, 219, 149, 0.3);
+    height: 100%;
+    width: 100%;
+}
+
 .cover a {
     background-color: white;
     border-radius: 50px;
-    color: black;
+    color: #055a91;
     display: block;
     font-size: 1.5rem;
     margin: 32px auto 5px auto;
@@ -24,8 +30,8 @@
 }
 
 .cover a::after {
-    background-color: black;
-    border: 2px solid black;
+    background-color: #055a91;
+    border: 2px solid #055a91;
     border-radius: 50px;
     content: '';
     height: 100%;
@@ -52,14 +58,8 @@
     text-align: center;
     width: 50%;
     color: white;
-    bottom: 35%;
+    bottom: 30%;
     left: 50%;
     transform: translateX(-50%);
     position: absolute;
-}
-
-.coverDarkener {
-    background-color: rgba(0, 0, 0, 0.55);
-    height: 100%;
-    width: 100%;
 }
