@@ -1,14 +1,29 @@
+:root {
+    --primary-color: #05386b;
+    --secondary-color: #5cdb95;
+}
+
 .container {
     display: flex;
     margin: 5px 1rem;
 }
 
+.container main h1,
+.container main h2,
+.container main h3,
+.container main h4,
+.container main p {
+    font-family: 'Zilla Slab', sans-serif;
+}
+
+
 .container aside {
-    /*background-color: red;*/
     flex-grow: 1;
+    border-right: 3px solid var(--primary-color);
+    margin-right: 2rem;
 }
 
 .container main {
     text-align: center;
-    flex-grow: 4;
+    flex-grow: 5;
 }
