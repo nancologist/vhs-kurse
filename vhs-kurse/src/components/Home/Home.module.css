@@ -12,7 +12,11 @@
 }
 
 .coverDarkener {
-    background-color: rgba(92, 219, 149, 0.5);
+    background-image: linear-gradient(
+            to right,
+            rgba(92, 219, 149, 0.1),
+            rgba(92, 219, 149, 0.7)
+    );
     height: 100%;
     width: 100%;
 }
