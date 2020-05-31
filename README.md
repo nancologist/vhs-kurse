@@ -97,7 +97,7 @@ ___
 # 2. Implementierung (Tickets)
 ## TODO 
 * __Priority: High:__
-    * Add Header-Cmp
+    * Header for Home! with Logic!
     * Style the course-cards.
     * Add Search Side-Drawer.
     * Add "Load-More" BTN : So when the User clicks on it, 5 more courses get loaded.
@@ -116,6 +116,7 @@ ___
 * Create primary cmps.
 * Cards & Card anlegen
 * Add Routes ('/', '/courses')
+* Add Header-Cmp
 ___
 
 ## 2.999. Extras

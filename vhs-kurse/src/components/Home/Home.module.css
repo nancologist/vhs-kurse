@@ -9,7 +9,6 @@
             no-repeat;
     background-size: cover;
     height: 100vh;
-    font-size: 1.2rem;
 }
 
 .coverDarkener {
@@ -23,7 +22,7 @@
     width: 100%;
 }
 
-.cover a {
+.cover .btn {
     background-color: white;
     border-radius: 50px;
     color: var(--primary-color);
@@ -39,7 +38,7 @@
     z-index: 0;
 }
 
-.cover a::after {
+.cover .btn::after {
     background-color: var(--primary-color);
     border: 2px solid var(--primary-color);
     border-radius: 50px;
@@ -54,12 +53,12 @@
     z-index: -1;
 }
 
-.cover a:hover {
+.cover .btn:hover {
     color: white;
     background-color: transparent;
 }
 
-.cover a:hover::after {
+.cover .btn:hover::after {
     transform: translate(0, -70%);
 }
 
@@ -72,4 +71,5 @@
     left: 50%;
     transform: translateX(-50%);
     position: absolute;
+    font-size: 1.2rem;
 }

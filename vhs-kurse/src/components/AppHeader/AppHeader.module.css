@@ -3,13 +3,22 @@
     --secondary-color: #5cdb95;
 }
 
-nav {
+.navBar {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 1.5rem;
     border: 3px solid var(--primary-color);
     padding: 1.1rem 0;
     background-color: var(--primary-color);
+}
+
+.homeNavBar {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 1.5rem;
+    border: 3px solid transparent;
+    padding: 1.1rem 0;
+    background-color: transparent;
 }
 
 .active {

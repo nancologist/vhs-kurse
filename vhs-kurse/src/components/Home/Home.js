@@ -1,12 +1,14 @@
 import React, {Fragment} from "react";
 import styles from "./Home.module.css";
 import {Link} from 'react-router-dom';
+import AppHeader from "../AppHeader/AppHeader";
 
 const home = (props) => {
     return (
         <Fragment>
             <div className={styles.cover}>
                 <div className={styles.coverDarkener}>
+                    <AppHeader isHome/>
                     <div className={styles.container}>
                         <h1>Kurse der Berliner Volkshochschulen</h1>
                         <p>
@@ -17,7 +19,7 @@ const home = (props) => {
                         <p>
                             Worauf wartest du noch? Raus aus der Quarantäne!
                         </p>
-                        <Link to="/courses">Zu Kursen</Link>
+                        <Link to="/courses" className={styles.btn}>Zu Kursen</Link>
                     </div>
                 </div>
             </div>
