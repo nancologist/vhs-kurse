@@ -6,18 +6,32 @@
 nav {
     display: flex;
     justify-content: space-evenly;
-    margin: 1rem;
+    margin-bottom: 1.5rem;
     border: 3px solid var(--primary-color);
-    padding: 1rem;
-    background-color: white;
+    padding: 1.1rem 0;
+    background-color: var(--primary-color);
 }
 
 .active {
     border-bottom: 3px solid var(--secondary-color);
 }
 
+.logoContainer {
+    background-color: white;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    position: relative;
+}
+
 .logoContainer img {
-    width: 60px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 90%;
 }
 
 .navList {
@@ -33,7 +47,8 @@ nav {
 }
 
 .navList li a {
-    padding-bottom: 3px;
+    padding-bottom: 10px;
+    color: white;
 }
 
 /* Right Navigation ---------- */

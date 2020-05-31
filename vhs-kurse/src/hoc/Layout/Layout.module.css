@@ -1,15 +1,14 @@
 .container {
     display: flex;
+    margin: 5px 1rem;
 }
 
 .container aside {
     background-color: red;
     flex-grow: 1;
-    margin: 1rem;
 }
 
 .container main {
-    margin: 1rem;
     text-align: center;
     flex-grow: 4;
 }
