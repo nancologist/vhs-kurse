@@ -1,19 +1,21 @@
 import React, {Component, Fragment} from 'react';
 import AppHeader from "../../components/AppHeader/AppHeader";
 import Courses from "../../containers/Courses/Courses";
-import styles from './CorusesLayout.module.css';
+import styles from './Layout.module.css';
 
 class Layout extends Component {
     render() {
         return (
             <Fragment>
                 <AppHeader/>
-
-                {/* SideDrawer */}
-
-                <main className={styles.Main}>
-                    <Courses/>
-                </main>
+                <div className={styles.container}>
+                    <aside>
+                        SideBar - Advance Search
+                    </aside>
+                    <main>
+                        <Courses/>
+                    </main>
+                </div>
             </Fragment>
         );
     }

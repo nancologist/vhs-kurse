@@ -4,10 +4,17 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-color: #05386b;
+    --secondary-color: #5cdb95;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     /*font-family: 'Rubik';*/
     /*font-family: 'Convergence';*/
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 a {
@@ -16,6 +23,7 @@ a {
     text-decoration: none;
     cursor: pointer;
     text-align: center;
+    color: var(--primary-color);
 }
 
 h1, h2, h3, h4 {
@@ -26,4 +34,8 @@ h1, h2, h3, h4 {
 
 p {
     margin-bottom: 0.6rem;
+}
+
+ul {
+    list-style: none;
 }

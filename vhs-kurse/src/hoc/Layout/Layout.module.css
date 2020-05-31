@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+}
+
+.container aside {
+    background-color: red;
+}
+
+.container main {
+    margin: 1rem;
+    text-align: center;
+}

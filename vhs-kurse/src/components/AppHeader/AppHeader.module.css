@@ -1,0 +1,42 @@
+:root {
+    --primary-color: #05386b;
+    --secondary-color: #5cdb95;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem;
+    border: 3px solid var(--primary-color);
+    padding: 1rem;
+    background-color: white;
+}
+
+.active {
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+.logoContainer img {
+    width: 60px;
+}
+
+.navList {
+    display: flex;
+    margin:0 1rem;
+    align-items: center;
+    font-weight: 600;
+}
+
+.navList li {
+    margin: 0 1rem;
+    padding: 0 5px;
+}
+
+.navList li a {
+    padding-bottom: 3px;
+}
+
+/* Right Navigation ---------- */
+.navRight {
+    display: flex;
+}
