@@ -32,7 +32,7 @@
     text-decoration: none;
     position: relative;
     min-width: 40%;
-    transition:all 1300ms;
+    transition:all 1000ms;
     overflow: hidden; /* Otherwise, Hovering Around Link will activate the effect. */
     will-change: tranform; /* Browser Performance Optimization */
     z-index: 0;
@@ -47,7 +47,7 @@
     width: 100%;
     display: block;
     position: absolute;
-    transform: translate(100%, -73%);
+    transform: translate(100%, -72%);
     transition:all 500ms ease-out;
     will-change: tranform; /* Browser Performance Optimization */
     z-index: -1;
@@ -59,7 +59,7 @@
 }
 
 .cover a:hover::after {
-    transform: translate(0, -73%);
+    transform: translate(0, -72%);
 }
 
 .container {
