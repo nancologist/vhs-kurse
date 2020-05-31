@@ -8,7 +8,6 @@
 
 .cover a {
     background-color: white;
-    border: 0px solid transparent;
     border-radius: 50px;
     color: black;
     display: block;
@@ -18,13 +17,14 @@
     text-decoration: none;
     position: relative;
     width: 30%;
-    transition:all 600ms ease-out;
-    overflow: hidden;
+    transition:all 900ms ease-out;
+    overflow: hidden; /* Otherwise, Hovering Around Link will activate the effect. */
+    will-change: tranform; /* Browser Performance Optimization */
 }
 
 .cover a::after {
     background-color: black;
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 50px;
     content: '';
     height: 100%;
@@ -33,14 +33,17 @@
     position: absolute;
     transform: translate(100%, -74%);
     transition:all 500ms ease-out;
+    will-change: tranform; /* Browser Performance Optimization */
+    z-index: -1;
 }
 
 .cover a:hover {
     color: white;
+    background-color: transparent;
 }
 
 .cover a:hover::after {
-    transform: translateY(-74%);
+    transform: translate(0, -74%);
     background-color: black;
 }
 
