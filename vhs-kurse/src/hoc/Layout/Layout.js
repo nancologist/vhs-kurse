@@ -10,7 +10,7 @@ class Layout extends Component {
                 <AppHeader/>
                 <div className={styles.container}>
                     <aside>
-                        SideBar - Advance Search
+                        <h1>SideBar - Advance Search</h1>
                     </aside>
                     <main>
                         <Courses/>

@@ -17,6 +17,10 @@ body {
     color: var(--primary-color);
 }
 
+#root {
+    margin: 0 5px;
+}
+
 a {
     /*font-family: 'Convergence';*/
     /*font-family: 'Rubik';*/
