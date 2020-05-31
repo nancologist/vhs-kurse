@@ -4,12 +4,10 @@
             no-repeat;
     background-size: cover;
     height: 100vh;
-    position: relative;
 }
 
 .cover a {
     background-color: white;
-    border: white 2px solid;
     border-radius: 50px;
     color: black;
     display: block;
@@ -17,12 +15,31 @@
     margin: 32px auto 5px auto;
     padding: 15px 0;
     text-decoration: none;
-    transition:all 300ms ease-out;
+    position: relative;
     width: 30%;
+    transition:all 300ms ease-out;
 }
 
 .cover a::after {
+    background-color: black;
+    content: '';
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: absolute;
+    transform: translateY(34%);
+    transition:all 300ms ease-out;
+    z-index: -1;
+}
 
+.cover a:hover {
+    color: white;
+    background-color: transparent;
+}
+
+.cover a:hover::after {
+    transform: translateY(-74%);
+    background-color: black;
 }
 
 .container {
