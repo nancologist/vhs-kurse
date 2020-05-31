@@ -1,13 +1,17 @@
 import React, {Component, Fragment} from 'react';
-import Layout from './hoc/Layout/Layout';
-import styles from './App.module.css';
+import {BrowserRouter, Route, Switch} from 'react-router-dom'
+import Layout from "./hoc/Layout/Layout.js";
+import Home from './components/Home/Home.js';
 
 class App extends Component {
     render() {
         return (
-            <Layout>
-                {/* ROUTES... */}
-            </Layout>
+            <BrowserRouter>
+                <Switch>
+                    <Route path="/courses" component={Layout}/>
+                    <Route path="/" component={Home}/>
+                </Switch>
+            </BrowserRouter>
         );
     }
 }

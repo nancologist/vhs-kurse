@@ -1,8 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import AppHeader from "../../components/AppHeader/AppHeader";
-
-import styles from './Layout.module.css';
 import Courses from "../../containers/Courses/Courses";
+import styles from './CorusesLayout.module.css';
 
 class Layout extends Component {
     render() {
@@ -14,7 +13,6 @@ class Layout extends Component {
 
                 <main className={styles.Main}>
                     <Courses/>
-                    {this.props.children}
                 </main>
             </Fragment>
         );
