@@ -97,20 +97,22 @@ ___
 # 2. Implementierung (Tickets)
 ## TODO 
 * __Priority: High:__
-    * Big Showcase as homepage!!!
+    * Choose a new Font.
     * Add Header-Cmp
     * Style the course-cards.
-    * Add Routes ('/home', '/courses')
     * Add Search Side-Drawer.
     * Add "Load-More" BTN : So when the User clicks on it, 5 more courses get loaded.
 
 * __Priority: Low__
     * Add Images to course-cards
     * Add Logo
+    * Small Devices Styling
 
 ## DONE
+* Big Showcase as homepage!!!
 * Create primary cmps.
 * Cards & Card anlegen
+* Add Routes ('/', '/courses')
 ___
 
 ## 2.999. Extras
