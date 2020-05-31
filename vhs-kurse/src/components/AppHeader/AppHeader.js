@@ -4,14 +4,17 @@ import logo from '../../assets/logo01.png';
 import styles from './AppHeader.module.css';
 
 const appHeader = (props) => {
-    let navCss = styles.navBar;
+    let navCss = [styles.navBar];
+
     if (props.isHome) {
-        navCss = styles.homeNavBar;
+        navCss.push(styles.homeNavBar);
+    } else {
+        navCss = navCss.filter(item => item !== styles.homeNavBar);
     }
 
     return (
         <header>
-            <nav className={navCss}>
+            <nav className={navCss.join(' ')}>
                 <div className={styles.logoContainer}>
                     <img src={logo} alt="VHS Kurse - Logo"/>
                 </div>
