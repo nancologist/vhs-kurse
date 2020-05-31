@@ -12,8 +12,8 @@ const home = (props) => {
                     <div className={styles.container}>
                         <h1>Kurse der Berliner Volkshochschulen</h1>
                         <p>
-                            In unserem Portal kannst du durch mehr als 1500 angebotenen Berliner Volkshochschule
-                            deine Kurse finden, dich anmelden und die Kursgebühr ganz einfach überweisen. Wenn du
+                            In unserem Portal kannst du durch mehr als 1500 Kursangebote Berliner Volkshochschulen
+                            deinen Kursen finden, dich anmelden und die Kursgebühr ganz einfach überweisen. Wenn du
                             Fragen hast, kannst du uns rund um die Uhr schreiben!
                         </p>
                         <p>
