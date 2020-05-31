@@ -8,7 +8,8 @@
     justify-content: space-evenly;
     margin-bottom: 1.5rem;
     padding: 1.1rem 0;
-    animation: addBg 1.7s forwards;
+    border: 3px solid var(--primary-color);
+    background-color: var(--primary-color);
 }
 
 .homeNavBar {
@@ -23,17 +24,6 @@
     to {
         border: 3px solid transparent;
         background-color: transparent;
-    }
-}
-
-@keyframes addBg {
-    from {
-        border: 3px solid transparent;
-        background-color: transparent;
-    }
-    to {
-        border: 3px solid var(--primary-color);
-        background-color: var(--primary-color);
     }
 }
 

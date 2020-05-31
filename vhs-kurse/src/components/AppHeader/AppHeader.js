@@ -8,8 +8,6 @@ const appHeader = (props) => {
 
     if (props.isHome) {
         navCss.push(styles.homeNavBar);
-    } else {
-        navCss = navCss.filter(item => item !== styles.homeNavBar);
     }
 
     return (
