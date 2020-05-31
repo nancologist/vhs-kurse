@@ -9,7 +9,14 @@ const home = (props) => {
                 <div className={styles.coverDarkener}>
                     <div className={styles.container}>
                         <h1>Kurse der Berliner Volkshochschulen</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam beatae blanditiis deserunt dicta ducimus ipsam, minima perspiciatis sapiente, sunt ut voluptate? Animi at commodi, cum cumque deserunt dolor dolores esse harum ipsa ipsum laboriosam laudantium maxime neque nesciunt non nostrum odit optio pariatur, quisquam repudiandae suscipit tempora totam voluptatibus?</p>
+                        <p>
+                            In unserem Portal kannst du durch mehr als 1500 angebotenen Berliner Volkshochschule
+                            deine Kurse finden, dich anmelden und die Kursgebühr ganz einfach überweisen. Wenn du
+                            Fragen hast, kannst du uns rund um die Uhr schreiben!
+                        </p>
+                        <p>
+                            Worauf wartest du noch? Raus aus der Quarantäne!
+                        </p>
                         <Link to="/courses">Zu Kursen</Link>
                     </div>
                 </div>

@@ -97,7 +97,6 @@ ___
 # 2. Implementierung (Tickets)
 ## TODO 
 * __Priority: High:__
-    * Choose a new Font.
     * Add Header-Cmp
     * Style the course-cards.
     * Add Search Side-Drawer.
@@ -110,6 +109,7 @@ ___
     * Add Images to course-cards
     * Add Logo
     * Small Devices Styling
+    * Add favourite fonts.
 
 ## DONE
 * Big Showcase as homepage!!!

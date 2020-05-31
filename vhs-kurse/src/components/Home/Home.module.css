@@ -9,9 +9,11 @@
             no-repeat;
     background-size: cover;
     height: 100vh;
+    font-size: 1.2rem;
 }
 
 .coverDarkener {
+    background-color: rgba(0,0,0, 0.5);
     background-image: linear-gradient(
             to right,
             rgba(92, 219, 149, 0.0),
@@ -26,7 +28,6 @@
     border-radius: 50px;
     color: var(--primary-color);
     display: inline-block;
-    font-size: 1.5rem;
     margin: 32px auto 5px auto;
     padding: 18px 0;
     text-decoration: none;
@@ -47,7 +48,7 @@
     width: 100%;
     display: block;
     position: absolute;
-    transform: translate(100%, -72%);
+    transform: translate(100%, -70%);
     transition:all 500ms ease-out;
     will-change: tranform; /* Browser Performance Optimization */
     z-index: -1;
@@ -59,15 +60,15 @@
 }
 
 .cover a:hover::after {
-    transform: translate(0, -72%);
+    transform: translate(0, -70%);
 }
 
 .container {
     padding: 3rem;
     text-align: center;
-    width: 50%;
+    width: 65%;
     color: white;
-    bottom: 30%;
+    bottom: 25%;
     left: 50%;
     transform: translateX(-50%);
     position: absolute;
