@@ -8,18 +8,23 @@
 }
 
 .cover a {
-    border: white 2px solid;
-    border-radius: 5px;
+    border: transparent 2px solid;
+    border-radius: 20px;
     color: white;
     display: block;
     font-size: 1.5rem;
-    margin: 5px auto;
+    margin: 32px auto 5px auto;
     padding: 5px 13px;
     text-decoration: none;
     width: 30%;
+    transition:all 300ms ease-out;
 }
 
 .cover a:hover {
+    border: white 2px solid;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
 }
 
 .container {
@@ -28,7 +33,7 @@
     /*background-color: red;*/
     width: 50%;
     color: white;
-    bottom: 40%;
+    bottom: 30%;
     left: 50%;
     transform: translateX(-50%);
     position: absolute;
