@@ -102,6 +102,9 @@ ___
     * Style the course-cards.
     * Add Search Side-Drawer.
     * Add "Load-More" BTN : So when the User clicks on it, 5 more courses get loaded.
+    * Detail-BTN on the Course-Cards and Creating DetailedCourse CMP with all the details of the course.
+    * Add a nice page 404!
+    * Einen angebrachten Text für die Home-Seite.
 
 * __Priority: Low__
     * Add Images to course-cards
@@ -121,12 +124,23 @@ ___
 
 # 3. Designs
 
+## Colors
+
 ![Design 01](./bilder/design-inspiration-01.png)
 
 BEST Of https://visme.co/blog/website-color-schemes/ :
 
 * Number 24
 * Number 48
+___
+
+## Favorite Fonts
+
+* Montserrat
+* Montserrat Alternates
+* Convergence
+* Zilla Slab
+* Rubik
 
 ___
 

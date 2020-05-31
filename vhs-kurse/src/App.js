@@ -9,7 +9,8 @@ class App extends Component {
             <BrowserRouter>
                 <Switch>
                     <Route path="/courses" component={Layout}/>
-                    <Route path="/" component={Home}/>
+                    <Route path="/" exact component={Home}/>
+                    <Route render={() => <h1>[App.js] Page Not Found Placeholder.</h1>}/>
                 </Switch>
             </BrowserRouter>
         );

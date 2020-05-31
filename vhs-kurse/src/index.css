@@ -5,16 +5,22 @@
 }
 
 body {
-    font-family: 'Roboto Light', 'Arial';
+    font-family: 'Montserrat', sans-serif;
+    /*font-family: 'Rubik';*/
+    /*font-family: 'Convergence';*/
 }
 
 a {
+    /*font-family: 'Convergence';*/
+    /*font-family: 'Rubik';*/
     text-decoration: none;
     cursor: pointer;
     text-align: center;
 }
 
-h1 {
+h1, h2, h3, h4 {
+    /*font-family: 'Montserrat Alternates';*/
+    font-family: 'Rubik', sans-serif;
     margin-bottom: 1rem;
 }
 
