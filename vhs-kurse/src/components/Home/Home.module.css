@@ -8,12 +8,15 @@
 }
 
 .cover a {
-    text-decoration: none;
-    color: white;
     border: white 2px solid;
     border-radius: 5px;
+    color: white;
+    display: block;
     font-size: 1.5rem;
+    margin: 5px auto;
     padding: 5px 13px;
+    text-decoration: none;
+    width: 30%;
 }
 
 .cover a:hover {
