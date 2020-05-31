@@ -15,7 +15,7 @@ class Courses extends Component {
     render() {
         return (
             this.state.courses.map(course => {
-                const desc = course.text.find(text => text.eigenschaft === 'Beschreibung').text;
+                // const desc = course.text.find(text => text.eigenschaft === 'Beschreibung').text;
                 return (
                     <CourseCard
                         key={course.guid}
