@@ -4,7 +4,7 @@
 }
 
 .container aside {
-    background-color: red;
+    /*background-color: red;*/
     flex-grow: 1;
 }
 

@@ -2,6 +2,7 @@ import React, {Component, Fragment} from 'react';
 import AppHeader from "../../components/AppHeader/AppHeader";
 import Courses from "../../containers/Courses/Courses";
 import styles from './Layout.module.css';
+import Search from "../../components/Search/Search";
 
 class Layout extends Component {
     render() {
@@ -10,7 +11,7 @@ class Layout extends Component {
                 <AppHeader/>
                 <div className={styles.container}>
                     <aside>
-                        <h1>SideBar - Advance Search</h1>
+                        <Search/>
                     </aside>
                     <main>
                         <Courses/>
