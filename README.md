@@ -97,7 +97,6 @@ ___
 # 2. Implementierung (Tickets)
 ## TODO 
 * __Priority: High, Next:__
-    * Spinner For The Card Container - (It takes a fraction of time until the data is loaded from Firebase, so it would be nice if we have a Spinner there.)
     * Add Redux (and with Redux Pass the Amount of Loaded Courses (now = 10) from ``Courses`` cmp to the ``Search`` SideBar cmp.)
     * Style the course-cards.
     * Add "Load-More" BTN : So when the User clicks on it, 5 more courses get loaded.
@@ -124,6 +123,7 @@ ___
     * Outsource ``randomDate()`` in 2 Functions : ``randomDate()`` and ``formateDate()``
     * "Preis" value should be in German Format in Decimal with comma instead of point (145.00 => 145,00)
     * NavListItems Hover!
+    * Spinner from https://projects.lukehaas.me/css-loaders/
 ___
 
 ## 2.999. Extras
