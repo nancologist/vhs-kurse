@@ -3,14 +3,19 @@ import CourseCard from "../../components/Course/CourseCard";
 import axios from "axios";
 
 class Courses extends Component {
+    constructor() {
+        super(Component);
+        this.getData();
+    }
+
     state = {
         courses: []
     };
 
-    componentDidMount() {
+    getData = () => {
         axios.get('https://vhs-kurse.firebaseio.com/veranstaltungen/veranstaltung.json?orderBy="$key"&limitToFirst=10')
             .then(res => this.setState({courses: res.data}));
-    }
+    };
 
     render() {
         return (
