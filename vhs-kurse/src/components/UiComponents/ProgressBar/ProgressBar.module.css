@@ -4,7 +4,7 @@
 }
 
 .progressInput {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .progressInput input {
@@ -18,9 +18,13 @@
     width: 50px;
 }
 
+.progressInput input::after {
+}
+
 .progressBar {
     background-color: white;
-    height: 4px;
+    border-radius: 5px;
+    height: 5px;
     width: 80%;
     position: relative;
 }
@@ -32,4 +36,5 @@
     width: 20px;
     border-radius: 50%;
     position: absolute;
+    transform: translate(0%, -36%);
 }
