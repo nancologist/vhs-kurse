@@ -27,10 +27,6 @@
     }
 }
 
-.active {
-    border-bottom: 3px solid var(--secondary-color);
-}
-
 .logoContainer {
     background-color: white;
     width: 80px;
@@ -49,6 +45,7 @@
     width: 90%;
 }
 
+/* Navigation List and its Items ------------------------------ */
 .navList {
     display: flex;
     margin:0 1rem;
@@ -64,6 +61,18 @@
 .navList li a {
     padding-bottom: 10px;
     color: white;
+    transition: all 300ms;
+    display: inline-block; /* Otherwise, SCALING by hovering would not work! */
+}
+
+.navList li a.active {
+    pointer-events: none; /* Exclude Active Link From Hovering Effect! */
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+.navList li a:hover {
+    /*color: red;*/
+    transform: scale(1.2);
 }
 
 /* Right Navigation ---------- */
