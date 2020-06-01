@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import CourseCard from "../../components/Course/CourseCard";
 import axios from "axios";
+import Spinner from "../../components/Spinner/Spinner";
 
 class Courses extends Component {
     constructor() {
@@ -9,12 +10,13 @@ class Courses extends Component {
     }
 
     state = {
-        courses: []
+        courses: [],
+        loading: true,
     };
 
     // This function will be moved to Redux:
     getData = () => {
-        axios.get('https://vhs-kurse.firebaseio.com/veranstaltungen/veranstaltung.json?orderBy="$key"&limitToFirst=10')
+        axios.get('https://vhs-kurse.firebaseio.com/veranstaltungen/veranstaltung.json?orderBy="$key"&limitToFirst=100')
             .then(res => {
                 let updatedCourses = res.data;
                 updatedCourses = updatedCourses.map( course => {
@@ -24,7 +26,11 @@ class Courses extends Component {
                         beginn_datum: this.randomStartDate(),
                     }
                 });
-                this.setState({courses: updatedCourses});
+                this.setState({courses: updatedCourses, loading: false});
+            })
+            .catch(err => {
+                console.log(err);
+                this.setState({loading: false})
             });
     };
 
@@ -66,6 +72,12 @@ class Courses extends Component {
     };
 
     render() {
+        if (this.state.loading) {
+            return (
+                <Spinner/>
+            );
+        }
+
         return (
             this.state.courses.map(course => {
                 // const desc = course.text.find(text => text.eigenschaft === 'Beschreibung').text;

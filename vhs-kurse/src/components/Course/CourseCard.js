@@ -5,7 +5,7 @@ const CourseCard = (props) => {
     return (
         <div className={styles.card}>
             <div className={styles.cardTitle}>
-                <h3>{props.title}s</h3>
+                <h3>{props.title}</h3>
                 <small>{props.caption}</small>
             </div>
             <div className={styles.courseImage}>
