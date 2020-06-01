@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import CourseCard from "../../components/Course/CourseCard";
 import axios from "axios";
-import Spinner from "../../components/Spinner/Spinner";
+import Spinner from "../../components/UiComponents/Spinner/Spinner";
 
 class Courses extends Component {
     constructor() {

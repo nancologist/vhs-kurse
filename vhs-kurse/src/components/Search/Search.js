@@ -1,9 +1,16 @@
 import React, {Component} from "react";
+import ProgressBar from "../UiComponents/ProgressBar/ProgressBar";
 
 class Search extends Component {
     render() {
         return (
-            <h1>SideBar</h1>
+            <div>
+                <h1>SideBar</h1>
+                <div>
+                    <h4>Anzahl der Kurse</h4>
+                    <ProgressBar/>
+                </div>
+            </div>
         );
     }
 }
