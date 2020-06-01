@@ -4,8 +4,8 @@ import axios from "axios";
 import Spinner from "../../components/UiComponents/Spinner/Spinner";
 
 class Courses extends Component {
-    constructor() {
-        super(Component);
+    constructor(props) {
+        super(props);
         this.getData();
     }
 

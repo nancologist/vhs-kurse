@@ -4,8 +4,13 @@ import styles from './ProgressBar.module.css';
 const ProgressBar = (props) => {
     return (
         <div>
-            <button className={styles.progressBtn}></button>
-            <div className={styles.progressBar}>Stange...</div>
+            <div className={styles.progressInput}>
+                {/*<label htmlFor="progressInput"></label>*/}
+                <input id="progressInput" type="number"/>
+            </div>
+            <div className={styles.progressBar}>
+                <button className={styles.progressBtn}/>
+            </div>
         </div>
     );
 };
