@@ -40,7 +40,7 @@ class Courses extends Component {
 
         const year = ['2021', '2022', '2023'][Math.floor(Math.random() * 3)];
 
-        return `${day}. ${month} ${year}`;
+        return `${day} ${month} ${year}`;
     };
 
     render() {
@@ -53,8 +53,14 @@ class Courses extends Component {
                         id={course.guid}
                         title={course.name}
                         caption={course.untertitel}
+
                         price={course.preis.betrag}
                         startDate={course.beginn_datum}
+
+                        schoolName={course.veranstaltungsort.name}
+                        postalCode={course.veranstaltungsort.adresse.plz}
+                        city={course.veranstaltungsort.adresse.ort}
+                        street={course.veranstaltungsort.adresse.strasse}
                     />
                 );
             })

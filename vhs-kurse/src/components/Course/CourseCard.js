@@ -17,6 +17,9 @@ const CourseCard = (props) => {
                         <strong>Beginn:</strong> {props.startDate}
                     </li>
                     <li>
+                        <strong>Ort:</strong> {props.schoolName} | {props.postalCode} {props.city}
+                    </li>
+                    <li>
                         <strong>Preis:</strong> {props.price} €
                     </li>
                 </ul>
