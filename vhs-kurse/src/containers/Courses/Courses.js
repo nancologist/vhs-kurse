@@ -14,10 +14,11 @@ class Courses extends Component {
 
     // This function will be moved to Redux:
     getData = () => {
-        axios.get('https://vhs-kurse.firebaseio.com/veranstaltungen/veranstaltung.json?orderBy="$key"&limitToFirst=3')
+        axios.get('https://vhs-kurse.firebaseio.com/veranstaltungen/veranstaltung.json?orderBy="$key"&limitToFirst=10')
             .then(res => {
                 let updatedCourses = res.data;
                 updatedCourses = updatedCourses.map( course => {
+                    console.log(typeof course.preis.betrag);
                     return {
                         ...course,
                         beginn_datum: this.randomStartDate(),
@@ -57,6 +58,13 @@ class Courses extends Component {
         return `${day} ${monthName} ${year}`;
     };
 
+    formatNumberInGerman = (num) => {
+        if (num.includes('.')) {
+            return num.replace('.', ',')
+        }
+        return num;
+    };
+
     render() {
         return (
             this.state.courses.map(course => {
@@ -68,7 +76,7 @@ class Courses extends Component {
                         title={course.name}
                         caption={course.untertitel}
 
-                        price={course.preis.betrag}
+                        price={this.formatNumberInGerman(course.preis.betrag)}
                         startDate={this.formatStartDate(course.beginn_datum)}
 
                         schoolName={course.veranstaltungsort.name}
