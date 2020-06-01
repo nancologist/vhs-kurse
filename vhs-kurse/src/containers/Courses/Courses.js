@@ -72,7 +72,7 @@ class Courses extends Component {
     };
 
     render() {
-        if (!this.state.loading) {
+        if (this.state.loading) {
             return (
                 <Spinner/>
             );
