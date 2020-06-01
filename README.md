@@ -97,7 +97,7 @@ ___
 # 2. Implementierung (Tickets)
 ## TODO 
 * __Priority: High, Next:__
-    * Add Redux
+    * Add Redux (and with Redux Pass the Amount of Loaded Courses (now = 10) from ``Courses`` cmp to the ``Search`` SideBar cmp.)
     * Style the course-cards.
     * Add "Load-More" BTN : So when the User clicks on it, 5 more courses get loaded.
     * Detail-BTN on the Course-Cards and Creating DetailedCourse CMP with all the details of the course.
