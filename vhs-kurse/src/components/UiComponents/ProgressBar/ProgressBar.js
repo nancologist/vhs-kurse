@@ -2,10 +2,10 @@ import React, {useRef} from "react";
 import styles from './ProgressBar.module.css';
 
 const ProgressBar = (props) => {
-    const progressBtnEl = useRef(null);
+    const progressEl = useRef(null);
     const inputChangeHandler = (event) => {
-        const progressBtnX = Math.ceil(event.target.value / 2.087);
-        progressBtnEl.current.style.transform = `translate(${progressBtnX}%, -36%)`
+        const width = Math.ceil(event.target.value / 18.78);
+        progressEl.current.style.width = width + '%';
     };
 
     return (
@@ -20,10 +20,7 @@ const ProgressBar = (props) => {
                 />
             </div>
             <div className={styles.progressBar}>
-                <button
-                    ref={progressBtnEl}
-                    className={styles.progressBtn}
-                />
+                <div ref={progressEl}></div>
             </div>
         </div>
     );

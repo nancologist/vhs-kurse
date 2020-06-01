@@ -1,8 +1,3 @@
-:root {
-    --primary-color: #05386b;
-    --secondary-color: #5cdb95;
-}
-
 .progressInput {
     margin-bottom: 2rem;
 }
@@ -23,18 +18,28 @@
 
 .progressBar {
     background-color: white;
-    border-radius: 5px;
-    height: 5px;
+    /*border: 2px solid white;*/
+    border-radius: 15px;
+    height: 10px;
     width: 80%;
-    position: relative;
 }
 
-.progressBtn {
-    background-color: var(--primary-color);
-    border: none;
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    position: absolute;
-    transform: translate(0%, -36%);
+.progressBar div {
+    display: block;
+    background: var(--primary-color);
+    height: inherit;
+    border-radius: 15px;
+    width: 0;
+    margin: auto 0;
+    transition: 500ms all ease;
 }
+
+/*.progressBtn {*/
+/*    background-color: var(--primary-color);*/
+/*    border: none;*/
+/*    height: 20px;*/
+/*    width: 20px;*/
+/*    border-radius: 50%;*/
+/*    position: absolute;*/
+/*    transform: translate(0%, -36%);*/
+/*}*/
