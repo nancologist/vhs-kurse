@@ -66,7 +66,7 @@
 }
 
 .navList li a.active {
-    pointer-events: none; /* Exclude Active Link From Hovering Effect! */
+    pointer-events: none; /* Exclude Active Link From Hovering Effect! (Attention: It also removes all click events from the element. */
     border-bottom: 3px solid var(--secondary-color);
 }
 

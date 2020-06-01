@@ -1,4 +1,4 @@
-import React, {Component, Fragment} from 'react';
+import React, {Component} from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import Layout from "./hoc/Layout/Layout.js";
 import Home from './components/Home/Home.js';
