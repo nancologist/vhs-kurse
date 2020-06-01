@@ -5,7 +5,8 @@
 
 .container {
     display: flex;
-    margin: 5px 1rem;
+    margin: 5px auto;
+    max-width: 70%;
 }
 
 .container main h1,
@@ -18,12 +19,11 @@
 
 
 .container aside {
-    flex-grow: 1;
+    width: 25%;
     border-right: 3px solid var(--primary-color);
     margin-right: 2rem;
 }
 
 .container main {
     text-align: center;
-    flex-grow: 5;
 }

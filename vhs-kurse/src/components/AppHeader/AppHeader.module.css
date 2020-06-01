@@ -5,9 +5,9 @@
 
 .navBar {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin-bottom: 1.5rem;
-    padding: 1.1rem 0;
+    padding: 1.1rem 15%;
     border: 3px solid var(--primary-color);
     background-color: var(--primary-color);
 }
