@@ -9,7 +9,7 @@
     padding-bottom: 5px;
     text-align: left;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .courseImage {
