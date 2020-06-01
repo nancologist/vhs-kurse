@@ -122,6 +122,7 @@ ___
     * Add Logo
     * Add a nice page 404!
     * Cart Buttons Styling
+    * PROBLEM : The Start-Date of the Courses are all at a same day! SOLVED: (Mori: I want different dates for courses start!)
 ___
 
 ## 2.999. Extras

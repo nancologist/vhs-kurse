@@ -20,7 +20,7 @@ class Courses extends Component {
                 updatedCourses = updatedCourses.map( course => {
                     return {
                         ...course,
-                        beginn_datum: this.randomDate(),
+                        beginn_datum: this.randomStartDate(),
                     }
                 });
                 this.setState({courses: updatedCourses});
@@ -28,23 +28,33 @@ class Courses extends Component {
     };
 
     // This Function will be moved to Redux:
-    randomDate = () => {
+    randomStartDate = () => {
         let day = Math.floor(Math.random() * 28) + 1;
         day = day < 10 ? "0" + day : day;
 
         let month = [Math.floor(Math.random() * 12)];
         month = month < 10 ? "0" + month : month;
 
-        // const monthNames = [
-        //     'Januar', 'Februar', 'März',
-        //     'April', 'Mai', 'Juni',
-        //     'Juli', 'August', 'September',
-        //     'Oktober', 'November', 'Dezember'
-        // ].substr(0,3);
-
         const year = ['2021', '2022', '2023'][Math.floor(Math.random() * 3)];
 
         return `${year}-${month}-${day}`;
+    };
+
+    formatStartDate = (startDate) => {
+        // "2021-04-21"
+        const monthNames = [
+            'Januar', 'Februar', 'März',
+            'April', 'Mai', 'Juni',
+            'Juli', 'August', 'September',
+            'Oktober', 'November', 'Dezember'
+        ];
+
+        const day = startDate.split('-')[1];
+        const year = startDate.split('-')[0];
+        const monthNumber = startDate.split('-')[1];
+        const monthName = monthNames[Number.parseInt(monthNumber)];
+
+        return `${day} ${monthName} ${year}`;
     };
 
     render() {
@@ -59,7 +69,7 @@ class Courses extends Component {
                         caption={course.untertitel}
 
                         price={course.preis.betrag}
-                        startDate={course.beginn_datum}
+                        startDate={this.formatStartDate(course.beginn_datum)}
 
                         schoolName={course.veranstaltungsort.name}
                         postalCode={course.veranstaltungsort.adresse.plz}
@@ -70,6 +80,6 @@ class Courses extends Component {
             })
         );
     }
-};
+}
 
 export default Courses;
