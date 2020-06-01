@@ -16,6 +16,11 @@
 .cardTitle {
     grid-column-start: 1;
     grid-column-end: 4;
+    margin-bottom: 15px;
+}
+
+.cardTitle h3 {
+    margin-bottom: 0;
 }
 
 .courseImage {

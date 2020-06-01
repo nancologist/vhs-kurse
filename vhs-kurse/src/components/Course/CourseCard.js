@@ -6,13 +6,20 @@ const CourseCard = (props) => {
         <div className={styles.card}>
             <div className={styles.cardTitle}>
                 <h3>{props.title}s</h3>
+                <small>{props.caption}</small>
             </div>
             <div className={styles.courseImage}>
                 <small>Hier kommt das Kursbild.</small>
             </div>
             <div className={styles.coursePreview}>
-                <p>{props.caption}</p>
-                <strong>{props.price} €</strong>
+                <ul>
+                    <li>
+                        <strong>Beginn:</strong>: 27 Jan 2021
+                    </li>
+                    <li>
+                        <strong>Preis</strong>: {props.price} €
+                    </li>
+                </ul>
             </div>
             <div className={styles.cardCtrl}>
                 <button>Mehr</button>
