@@ -1,5 +1,12 @@
 /* https://projects.lukehaas.me/css-loaders/ */
 
+.loaderContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 80vh;
+}
+
 .loader {
     margin: 100px auto;
     font-size: 25px;
