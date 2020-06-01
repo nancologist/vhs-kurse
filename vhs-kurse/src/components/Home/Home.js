@@ -7,7 +7,7 @@ const home = (props) => {
     return (
         <Fragment>
             <div className={styles.cover}>
-                <div className={styles.coverDarkener}>
+                <div className={styles.coverOverlay}>
                     <AppHeader isHome/>
                     <div className={styles.container}>
                         <h1>Kurse der Berliner Volkshochschulen</h1>

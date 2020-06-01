@@ -9,7 +9,7 @@
     padding-bottom: 5px;
     text-align: left;
     display: flex;
-    align-items: stretch;
+    align-items: center;
 }
 
 .courseImage {
@@ -19,7 +19,7 @@
 }
 
 .coursePreview {
-
+    margin-left: 1rem;
 }
 
 .cardCtrl {
