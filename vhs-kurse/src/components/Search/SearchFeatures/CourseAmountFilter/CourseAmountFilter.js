@@ -15,7 +15,7 @@ const CourseAmountFilter = (props) => {
     return (
         <div>
             <div className={styles.progressInput}>
-                <label htmlFor="progressInput">Anzahl:</label>
+                <label htmlFor="progressInput">Anz. Ergebnisse</label>
                 <input
                     id="progressInput"
                     type="number"
