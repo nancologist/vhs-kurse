@@ -24,6 +24,7 @@
 
 .cover .btn {
     background-color: white;
+    border: 3px solid white;
     border-radius: 50px;
     color: var(--primary-color);
     display: inline-block;
@@ -40,7 +41,6 @@
 
 .cover .btn::after {
     background-color: var(--primary-color);
-    border: 2px solid var(--primary-color);
     border-radius: 50px;
     content: '';
     height: 100%;

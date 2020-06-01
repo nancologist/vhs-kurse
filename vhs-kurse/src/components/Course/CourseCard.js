@@ -7,14 +7,16 @@ const CourseCard = (props) => {
             <div className={styles.cardTitle}>
                 <h3>{props.title}s</h3>
             </div>
-            <div className={styles.courseImage}></div>
+            <div className={styles.courseImage}>
+                <small>Hier kommt das Kursbild.</small>
+            </div>
             <div className={styles.coursePreview}>
                 <p>{props.caption}</p>
                 <strong>{props.price} €</strong>
             </div>
             <div className={styles.cardCtrl}>
-                <p>Mehr</p>
-                <p>Hinzufügen</p>
+                <button>Mehr</button>
+                <button>Hinzufügen</button>
             </div>
         </div>
     );
