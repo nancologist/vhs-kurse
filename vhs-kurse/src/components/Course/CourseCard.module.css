@@ -37,6 +37,7 @@
     border-radius: 30px;
     box-shadow: none;
     color: white;
+    cursor: pointer;
     display: block;
     font-size: 0.8rem;
     height: 40px;
