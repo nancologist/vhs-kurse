@@ -29,18 +29,22 @@ class Courses extends Component {
 
     // This Function will be moved to Redux:
     randomDate = () => {
-        const day = Math.floor(Math.random() * 29) + 1;
+        let day = Math.floor(Math.random() * 28) + 1;
+        day = day < 10 ? "0" + day : day;
 
-        const month = [
-            'Januar', 'Februar', 'März',
-            'April', 'Mai', 'Juni',
-            'Juli', 'August', 'September',
-            'Oktober', 'November', 'Dezember'
-        ][Math.floor(Math.random() * 12)].substr(0,3);
+        let month = [Math.floor(Math.random() * 12)];
+        month = month < 10 ? "0" + month : month;
+
+        // const monthNames = [
+        //     'Januar', 'Februar', 'März',
+        //     'April', 'Mai', 'Juni',
+        //     'Juli', 'August', 'September',
+        //     'Oktober', 'November', 'Dezember'
+        // ].substr(0,3);
 
         const year = ['2021', '2022', '2023'][Math.floor(Math.random() * 3)];
 
-        return `${day} ${month} ${year}`;
+        return `${year}-${month}-${day}`;
     };
 
     render() {
