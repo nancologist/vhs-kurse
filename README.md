@@ -98,7 +98,6 @@ ___
 ## TODO 
 * __Priority: High, Next:__
     * Add Redux (and with Redux Pass the Amount of Loaded Courses (now = 10) from ``Courses`` cmp to the ``Search`` SideBar cmp.)
-    * Style the course-cards.
     * Add "Load-More" BTN : So when the User clicks on it, 5 more courses get loaded.
     * Detail-BTN on the Course-Cards and Creating DetailedCourse CMP with all the details of the course.
     * Einen angebrachten Text für die Home-Seite.
@@ -118,7 +117,7 @@ ___
     * Add Search Side-Drawer.
     * Add Logo
     * Add a nice page 404!
-    * Cart Buttons Styling
+    * CourseCard & Buttons Styling
     * PROBLEM : The Start-Date of the Courses are all at a same day! SOLVED: (Mori: I want different dates for courses start!)
     * Outsource ``randomDate()`` in 2 Functions : ``randomDate()`` and ``formateDate()``
     * "Preis" value should be in German Format in Decimal with comma instead of point (145.00 => 145,00)

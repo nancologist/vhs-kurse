@@ -70,3 +70,12 @@
     margin: 10rem auto 0 auto;
     font-size: 1.2rem;
 }
+
+.container h1::after {
+    content: '';
+    border-bottom: 5px solid var(--primary-color);
+    width: 60%;
+    height: 1px;
+    display: block;
+    margin: 10px auto 0 auto;
+}
