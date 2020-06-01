@@ -96,27 +96,28 @@ ___
 
 # 2. Implementierung (Tickets)
 ## TODO 
-* __Priority: High:__
-    * Header for Home! with Logic!
+* __Priority: High, Next:__
+    * Add Redux
     * Style the course-cards.
-    * Add Search Side-Drawer.
     * Add "Load-More" BTN : So when the User clicks on it, 5 more courses get loaded.
     * Detail-BTN on the Course-Cards and Creating DetailedCourse CMP with all the details of the course.
-    * Add a nice page 404!
     * Einen angebrachten Text für die Home-Seite.
 
 * __Priority: Low__
     * Add Images to course-cards
-    * Add Logo
     * Small Devices Styling
     * Add favourite fonts.
 
-## DONE
-* Big Showcase as homepage!!!
-* Create primary cmps.
-* Cards & Card anlegen
-* Add Routes ('/', '/courses')
-* Add Header-Cmp
+* __DONE:__  
+    * Big Showcase as homepage!!!
+    * Create primary cmps.
+    * Cards & Card anlegen
+    * Add Routes ('/', '/courses')
+    * Add Header-Cmp
+    * Header for Home! with Logic!
+    * Add Search Side-Drawer.
+    * Add Logo
+    * Add a nice page 404!
 ___
 
 ## 2.999. Extras
