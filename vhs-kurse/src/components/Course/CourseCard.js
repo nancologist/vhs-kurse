@@ -14,10 +14,10 @@ const CourseCard = (props) => {
             <div className={styles.coursePreview}>
                 <ul>
                     <li>
-                        <strong>Beginn:</strong>: 27 Jan 2021
+                        <strong>Beginn:</strong> {props.startDate}
                     </li>
                     <li>
-                        <strong>Preis</strong>: {props.price} €
+                        <strong>Preis:</strong> {props.price} €
                     </li>
                 </ul>
             </div>
