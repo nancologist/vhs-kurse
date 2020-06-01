@@ -42,8 +42,12 @@
 }
 
 /* Card Preview (Course Infos) ------------ */
+.coursePreview ul {
+    height: 100%;
+}
+
 .coursePreview ul li {
-    margin-bottom: 5px;
+    margin-bottom: 7px;
 }
 
 /* Card Control Buttons ------------------- */
