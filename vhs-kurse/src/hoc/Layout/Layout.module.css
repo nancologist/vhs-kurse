@@ -13,6 +13,7 @@
 
 
 .container aside {
+    text-align: center;
     width: 30%;
     border-right: 3px solid var(--primary-color);
     margin-right: 2rem;

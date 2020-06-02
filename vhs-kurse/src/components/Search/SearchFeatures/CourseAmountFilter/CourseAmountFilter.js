@@ -1,4 +1,4 @@
-import React, {useRef, useState} from "react";
+import React, {useState} from "react";
 import styles from './CourseAmountFilter.module.css';
 
 const CourseAmountFilter = (props) => {
@@ -9,7 +9,6 @@ const CourseAmountFilter = (props) => {
             value = 1878
         }
         setInputValue(value);
-        const width = Math.ceil(value / 18.78);
     };
 
     return (
@@ -28,7 +27,7 @@ const CourseAmountFilter = (props) => {
             <div className={styles.progressBar}>
                 <div
                     style={{
-                        width: (inputVal / 18.78) + '%'
+                        width: Math.ceil((inputVal / 18.78)) + '%'
                     }}
                 />
             </div>

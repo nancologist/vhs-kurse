@@ -16,7 +16,7 @@ class Courses extends Component {
 
     // This function will be moved to Redux:
     getData = () => {
-        axios.get('https://vhs-kurse.firebaseio.com/veranstaltungen/veranstaltung.json?orderBy="$key"&limitToFirst=50')
+        axios.get('https://vhs-kurse.firebaseio.com/veranstaltungen/veranstaltung.json?orderBy="$key"&limitToFirst=100')
             .then(res => {
                 let updatedCourses = res.data;
                 updatedCourses = updatedCourses.map( course => {
