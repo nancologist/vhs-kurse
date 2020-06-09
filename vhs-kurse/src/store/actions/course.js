@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const fetchCourses = (amount = 5) => {
+export const fetchCourses = (amount) => {
     return (dispatchAction) => {
         axios.get('https://vhs-kurse.firebaseio.com/veranstaltungen/' +
             'veranstaltung.json?orderBy="$key"&limitToFirst=' + amount)

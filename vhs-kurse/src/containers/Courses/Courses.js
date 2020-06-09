@@ -1,19 +1,14 @@
 import React, {Component} from "react";
 import CourseCard from "../../components/Course/CourseCard";
-import axios from "axios";
 import Spinner from "../../components/UiComponents/Spinner/Spinner";
 import {connect} from 'react-redux';
 import * as courseActions from '../../store/actions/course';
 
 class Courses extends Component {
-    constructor(props) {
-        super(props);
-        // this.getData();
-    }
-
-    componentDidMount() {
-        this.props.onFetchCourses();
-    }
+    // constructor(props) {
+    //     super(props);
+    //     // this.getData();
+    // }
 
     // state = {
     //     courses: [],
@@ -101,10 +96,4 @@ const mapStateToProps = (state) => {
     };
 };
 
-const mapDispatchToProps = (dispatchAction) => {
-    return {
-        onFetchCourses: () => dispatchAction(courseActions.fetchCourses())
-    };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Courses);
+export default connect(mapStateToProps)(Courses);

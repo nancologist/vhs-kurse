@@ -3,6 +3,7 @@ import * as util from '../../util/util';
 const initialState = {
     courses: [],
     loading: true,
+    amount: 100,
 };
 
 const reducer = (state = initialState, action) => {

@@ -2,15 +2,6 @@ import React, {useState} from "react";
 import styles from './CourseAmountFilter.module.css';
 
 const CourseAmountFilter = (props) => {
-    const [inputVal, setInputValue] = useState(props.courseAmount);
-    const inputChangeHandler = (event) => {
-        let value = Number.parseInt(event.target.value);
-        if (value > 1878) {
-            value = 1878
-        }
-        setInputValue(value);
-    };
-
     return (
         <div>
             <div className={styles.progressInput}>
@@ -20,14 +11,14 @@ const CourseAmountFilter = (props) => {
                     type="number"
                     min="0"
                     max="1878"
-                    value={inputVal}
-                    onChange={inputChangeHandler}
+                    value={props.value}
+                    onChange={props.changed}
                 />
             </div>
             <div className={styles.progressBar}>
                 <div
                     style={{
-                        width: Math.ceil((inputVal / 18.78)) + '%'
+                        width: Math.ceil((props.value / 18.78)) + '%'
                     }}
                 />
             </div>
