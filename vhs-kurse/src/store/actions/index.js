@@ -1,0 +1,1 @@
+export courseActions from './course';

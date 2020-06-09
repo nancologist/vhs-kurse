@@ -15,23 +15,23 @@ class Courses extends Component {
     };
 
     // This function will be moved to Redux:
-    getData = () => {
-        axios.get('https://vhs-kurse.firebaseio.com/veranstaltungen/veranstaltung.json?orderBy="$key"&limitToFirst=100')
-            .then(res => {
-                let updatedCourses = res.data;
-                updatedCourses = updatedCourses.map( course => {
-                    return {
-                        ...course,
-                        beginn_datum: this.randomStartDate(),
-                    }
-                });
-                this.setState({courses: updatedCourses, loading: false});
-            })
-            .catch(err => {
-                console.log(err);
-                this.setState({loading: false})
-            });
-    };
+    // getData = () => {
+    //     axios.get('https://vhs-kurse.firebaseio.com/veranstaltungen/veranstaltung.json?orderBy="$key"&limitToFirst=100')
+    //         .then(res => {
+    //             let updatedCourses = res.data;
+    //             updatedCourses = updatedCourses.map( course => {
+    //                 return {
+    //                     ...course,
+    //                     beginn_datum: this.randomStartDate(),
+    //                 }
+    //             });
+    //             this.setState({courses: updatedCourses, loading: false});
+    //         })
+    //         .catch(err => {
+    //             console.log(err);
+    //             this.setState({loading: false})
+    //         });
+    // };
 
     // This Function will be moved to Redux:
     randomStartDate = () => {
