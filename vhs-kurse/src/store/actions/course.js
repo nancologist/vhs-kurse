@@ -1,17 +1,12 @@
 import axios from "axios";
 
-export const fetchCourses = (amount = 100) => {
+export const fetchCourses = (amount = 5) => {
     return (dispatchAction) => {
         axios.get('https://vhs-kurse.firebaseio.com/veranstaltungen/' +
             'veranstaltung.json?orderBy="$key"&limitToFirst=' + amount)
             .then(res => {
                 const fetchedCourses = res.data;
-                dispatchAction((fetchedCourses) => {
-                    return {
-                        type: 'FETCH_COURSES',
-                        fetchedCourses,
-                    };
-                });
+                dispatchAction(fetchCoursesSuccess(fetchedCourses));
             })
             .catch(err => {
                 console.log(err);
@@ -20,9 +15,11 @@ export const fetchCourses = (amount = 100) => {
     };
 };
 
-// const fetchCourses = (courses) => {
-//     return {
-//         type: 'FETCH_COURSES',
-//         courses,
-//     };
-// };
+// Actions ++++++++++++++++++++++++++++++++++++++++
+
+const fetchCoursesSuccess = (fetchedCourses) => {
+    return {
+        type: 'FETCH_COURSES',
+        fetchedCourses: fetchedCourses,
+    };
+};
