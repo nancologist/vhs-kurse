@@ -9,10 +9,10 @@ class Courses extends Component {
         this.getData();
     }
 
-    state = {
-        courses: [],
-        loading: true,
-    };
+    // state = {
+    //     courses: [],
+    //     loading: true,
+    // };
 
     // This function will be moved to Redux:
     // getData = () => {

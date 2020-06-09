@@ -3,11 +3,18 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import './index.css';
-import {createStore} from 'redux';
-import reducer from './store/reducer';
+import {createStore, combineReducers, applyMiddleware, compose} from 'redux';
+import courseReducer from './store/reducers/course';
 import {Provider} from 'react-redux';
+import thunk from "redux-thunk";
 
-const reduxStore = createStore(reducer);
+const rootReducer = combineReducers({
+    courseReducer
+});
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const reduxStore = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)));
 
 ReactDOM.render(
     <Provider store={reduxStore}>
