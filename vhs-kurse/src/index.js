@@ -9,7 +9,7 @@ import {Provider} from 'react-redux';
 import thunk from "redux-thunk";
 
 const rootReducer = combineReducers({
-    courseReducer
+    courseReducer,
 });
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

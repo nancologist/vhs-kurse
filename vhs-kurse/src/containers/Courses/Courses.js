@@ -2,11 +2,17 @@ import React, {Component} from "react";
 import CourseCard from "../../components/Course/CourseCard";
 import axios from "axios";
 import Spinner from "../../components/UiComponents/Spinner/Spinner";
+import {connect} from 'react-redux';
+import * as courseActions from '../../store/actions/course';
 
 class Courses extends Component {
     constructor(props) {
         super(props);
-        this.getData();
+        // this.getData();
+    }
+
+    componentDidMount() {
+        this.props.onFetchCourses();
     }
 
     // state = {
@@ -33,19 +39,6 @@ class Courses extends Component {
     //         });
     // };
 
-    // This Function will be moved to Redux:
-    randomStartDate = () => {
-        let day = Math.floor(Math.random() * 28) + 1;
-        day = day < 10 ? "0" + day : day;
-
-        let month = [Math.floor(Math.random() * 12)];
-        month = month < 10 ? "0" + month : month;
-
-        const year = ['2021', '2022', '2023'][Math.floor(Math.random() * 3)];
-
-        return `${year}-${month}-${day}`;
-    };
-
     formatStartDate = (startDate) => {
         // "2021-04-21"
         const monthNames = [
@@ -71,14 +64,14 @@ class Courses extends Component {
     };
 
     render() {
-        if (this.state.loading) {
+        if (this.props.loading) {
             return (
                 <Spinner/>
             );
         }
 
         return (
-            this.state.courses.map(course => {
+            this.props.courses.map(course => {
                 // const desc = course.text.find(text => text.eigenschaft === 'Beschreibung').text;
                 return (
                     <CourseCard
@@ -101,4 +94,17 @@ class Courses extends Component {
     }
 }
 
-export default Courses;
+const mapStateToProps = (state) => {
+    return {
+        courses: state.courseReducer.courses,
+        loading: state.courseReducer.loading,
+    };
+};
+
+const mapDispatchToProps = (dispatchAction) => {
+    return {
+        onFetchCourses: () => dispatchAction(courseActions.fetchCourses())
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Courses);
