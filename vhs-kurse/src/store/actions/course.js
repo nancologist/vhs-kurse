@@ -15,11 +15,24 @@ export const fetchCourses = (amount) => {
     };
 };
 
+export const filterAccessibleCourses = (accessible) => {
+    return (dispatchAction) => {
+        dispatchAction(filterAccessible(accessible));
+    };
+};
+
 // Actions ++++++++++++++++++++++++++++++++++++++++
 
 const fetchCoursesSuccess = (fetchedCourses) => {
     return {
         type: 'FETCH_COURSES',
         fetchedCourses: fetchedCourses,
+    };
+};
+
+const filterAccessible = (accessible) => {
+    return {
+        type: 'FILTER_ACCESSIBLE_COURSES',
+        accessible: accessible,
     };
 };

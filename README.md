@@ -127,7 +127,8 @@ ___
     * "Preis" value should be in German Format in Decimal with comma instead of point (145.00 => 145,00)
     * NavListItems Hover!
     * Spinner from https://projects.lukehaas.me/css-loaders/
-    * Adding Redux-Thunk Package to execute async code by dispatching Redux-Actions.  
+    * Adding Redux-Thunk Package to execute async code by dispatching Redux-Actions.
+    * Using Material-UI for some UI Components 
 ___
 
 ## 2.999. Extras

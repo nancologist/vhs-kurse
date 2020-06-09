@@ -3,19 +3,41 @@ import CourseAmountFilter from "./SearchFeatures/CourseAmountFilter/CourseAmount
 import style from './Search.module.css';
 import {connect} from 'react-redux';
 import * as courseActions from "../../store/actions/course";
+import {Switch as UiSwitch} from '@material-ui/core';
 
 class Search extends Component {
+    constructor(props) {
+        super(props);
+        this.props.onFetchCourses(this.props.amount);
+    }
+
     state = {
-        courseAmount: this.props.initialAmount,
+        courseAmount: this.props.amount,
+        accessible: false,
     };
 
-    handleChange = (event) => {
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        if (this.props.amount !== prevProps.amount) {
+            this.setState({courseAmount: this.props.amount});
+        }
+    }
+
+    changeCourseAmount = (event) => {
         let value = Number.parseInt(event.target.value);
         if (value > 1878) {
             value = 1878
         }
-        this.setState({courseAmount: value});
+        this.setState({courseAmount: value, accessible: false});
         this.props.onFetchCourses(value);
+    };
+
+    toggleUiSwitch = (event) => {
+        this.setState(
+            prevState => {
+                this.props.onCheckBarrierFree(!prevState.accessible);
+                return {accessible: !prevState.accessible};
+            }
+        );
     };
 
     render() {
@@ -25,7 +47,16 @@ class Search extends Component {
                 <div className={style.searchFeature}>
                     <CourseAmountFilter
                         value={this.state.courseAmount}
-                        changed={this.handleChange}
+                        changed={this.changeCourseAmount}
+                    />
+                </div>
+
+                <div className={style.searchFeature}>
+                    <label>Barrierefrei</label>
+                    <UiSwitch
+                        checked={this.state.accessible}
+                        value={this.state.accessible}
+                        onChange={this.toggleUiSwitch}
                     />
                 </div>
 
@@ -36,13 +67,14 @@ class Search extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        initialAmount: state.courseReducer.amount,
+        amount: state.courseReducer.amount,
     }
 };
 
 const mapDispatchToProps = (dispatchAction) => {
     return {
-        onFetchCourses: (amount) => dispatchAction(courseActions.fetchCourses(amount))
+        onFetchCourses: (amount) => dispatchAction(courseActions.fetchCourses(amount)),
+        onCheckBarrierFree: (accessible) => dispatchAction(courseActions.filterAccessibleCourses(accessible))
     };
 };
 
