@@ -65,8 +65,13 @@ class Courses extends Component {
             );
         }
 
+        let toRenderCourses = this.props.courses;
+        if (this.props.filteredCourses.length > 0) {
+            toRenderCourses = this.props.filteredCourses;
+        }
+
         return (
-            this.props.courses.map(course => {
+            toRenderCourses.map(course => {
                 // const desc = course.text.find(text => text.eigenschaft === 'Beschreibung').text;
                 return (
                     <CourseCard
@@ -92,6 +97,7 @@ class Courses extends Component {
 const mapStateToProps = (state) => {
     return {
         courses: state.courseReducer.courses,
+        filteredCourses: state.courseReducer.filteredCourses,
         loading: state.courseReducer.loading,
     };
 };

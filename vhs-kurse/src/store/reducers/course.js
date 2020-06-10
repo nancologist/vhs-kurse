@@ -2,6 +2,7 @@ import * as util from '../../util/util';
 
 const initialState = {
     courses: [],
+    filteredCourses: [],
     loading: true,
     amount: 100,
     accessible: false,
@@ -9,8 +10,8 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
     if (action.type === 'FETCH_COURSES') {
-        let updatedCourses = action.fetchedCourses;
-        updatedCourses = updatedCourses.map( course => {
+        let filteredCourses = action.fetchedCourses;
+        filteredCourses = filteredCourses.map( course => {
             return {
                 ...course,
                 beginn_datum: util.randomDate(),
@@ -19,24 +20,29 @@ const reducer = (state = initialState, action) => {
 
         return {
             ...state,
-            courses: updatedCourses,
+            courses: filteredCourses,
             loading: false,
         }
     }
 
     if (action.type === 'FILTER_ACCESSIBLE_COURSES') {
-        const prevCourses = state.courses;
         if (action.accessible) {
-            const updatedCourses = state.courses.filter(course => {
+            const filteredCourses = state.courses.filter(course => {
                 return course.veranstaltungsort.barrierefrei === 'true';
             });
 
-            // console.log(updatedCourses.length);
-
             return {
                 ...state,
-                courses: updatedCourses,
-                amount: updatedCourses.length,
+                filteredCourses: filteredCourses,
+                amount: filteredCourses.length,
+                accessible: true,
+            };
+        } else {
+            return {
+                ...state,
+                filteredCourses: [],
+                amount: state.courses.length,
+                accessible: false,
             };
         }
     }

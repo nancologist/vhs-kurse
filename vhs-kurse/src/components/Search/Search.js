@@ -13,7 +13,6 @@ class Search extends Component {
 
     state = {
         courseAmount: this.props.amount,
-        accessible: false,
     };
 
     componentDidUpdate(prevProps, prevState, snapshot) {
@@ -27,7 +26,7 @@ class Search extends Component {
         if (value > 1878) {
             value = 1878
         }
-        this.setState({courseAmount: value, accessible: false});
+        this.setState({courseAmount: value});
         this.props.onFetchCourses(value);
     };
 
@@ -54,8 +53,8 @@ class Search extends Component {
                 <div className={style.searchFeature}>
                     <label>Barrierefrei</label>
                     <UiSwitch
-                        checked={this.state.accessible}
-                        value={this.state.accessible}
+                        checked={this.props.accessible}
+                        value={this.props.accessible}
                         onChange={this.toggleUiSwitch}
                     />
                 </div>
@@ -68,6 +67,7 @@ class Search extends Component {
 const mapStateToProps = (state) => {
     return {
         amount: state.courseReducer.amount,
+        accessible: state.courseReducer.accessible,
     }
 };
 
