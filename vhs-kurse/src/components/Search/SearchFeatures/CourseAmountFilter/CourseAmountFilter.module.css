@@ -1,3 +1,7 @@
+.cmp {
+    padding-bottom: 0.8rem;
+}
+
 .progressInput {
     margin-bottom: 2rem;
     display: flex;
