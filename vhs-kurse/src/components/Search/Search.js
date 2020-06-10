@@ -50,7 +50,7 @@ class Search extends Component {
                     />
                 </div>
 
-                <div className={style.searchFeature}>
+                <div className={[style.searchFeature, style.barrierFree].join(' ')}>
                     <label>Barrierefrei</label>
                     <UiSwitch
                         checked={this.props.accessible}

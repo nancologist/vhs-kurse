@@ -3,7 +3,7 @@ import styles from './CourseAmountFilter.module.css';
 
 const CourseAmountFilter = (props) => {
     return (
-        <div>
+        <div className={props.searchFeatureStyle}>
             <div className={styles.progressInput}>
                 <label htmlFor="progressInput">Anz. Ergebnisse</label>
                 <input

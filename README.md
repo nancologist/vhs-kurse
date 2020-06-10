@@ -97,7 +97,8 @@ ___
 # 2. Implementierung (Tickets)
 ## TODO 
 * __Priority: High, Next:__
-    * For Advance-Search Inspiration take a look at 
+    * Add Price to Advance Search
+    * Add Detailed Course CMP 
     * Change the color of CourseCards Background.
     * Bigger font size for the CourseCards.
     * For formatting the decimal numbers in German, use the following built-in JS function: [.toLocalString()](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString)
