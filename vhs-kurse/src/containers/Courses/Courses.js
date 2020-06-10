@@ -43,7 +43,7 @@ class Courses extends Component {
             'Oktober', 'November', 'Dezember'
         ];
 
-        const day = startDate.split('-')[1];
+        const day = startDate.split('-')[2];
         const year = startDate.split('-')[0];
         const monthNumber = startDate.split('-')[1];
         const monthName = monthNames[Number.parseInt(monthNumber)];

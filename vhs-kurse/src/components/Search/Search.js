@@ -24,10 +24,14 @@ class Search extends Component {
     changeCourseAmount = (event) => {
         let value = Number.parseInt(event.target.value);
         if (value > 1878) {
-            value = 1878
+            value = 1878;
+        } else if (value < 1) {
+            value = 1;
         }
         this.setState({courseAmount: value});
-        this.props.onFetchCourses(value);
+        setTimeout(() => {
+            this.props.onFetchCourses(value);
+        }, 1000)
     };
 
     toggleUiSwitch = (event) => {

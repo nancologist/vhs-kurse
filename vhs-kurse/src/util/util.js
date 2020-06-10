@@ -1,5 +1,5 @@
 export const randomDate = () => {
-    let day = Math.ceil(Math.random() * 28) + 1;
+    let day = Math.floor(Math.random() * 28) + 1;
     day = day < 10 ? "0" + day : day;
 
     let month = [Math.floor(Math.random() * 12)];
