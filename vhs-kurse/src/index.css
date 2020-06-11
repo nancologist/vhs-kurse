@@ -20,6 +20,7 @@ input[type=number] {
 
 :root {
     --primary-color: #05386b;
+    --primary-light-color: #5d7f98;
     --secondary-color: #5cdb95;
     --secondary-light-color: #8ee4af;
 }
