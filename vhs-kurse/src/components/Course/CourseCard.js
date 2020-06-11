@@ -4,7 +4,7 @@ import styles from './CourseCard.module.css';
 const CourseCard = (props) => {
     return (
         <div className={styles.card}>
-            <div className={styles.cardTitle}>
+            <div className={[styles.cardTitle, styles.hrLine].join(' ')}>
                 <h3>{props.title}</h3>
                 <small>{props.caption}</small>
             </div>

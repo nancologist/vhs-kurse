@@ -58,9 +58,12 @@ class Search extends Component {
                     <label>Barrierefrei</label>
                     <UiSwitch
                         checked={this.props.accessible}
-                        value={this.props.accessible}
                         onChange={this.toggleUiSwitch}
                     />
+                </div>
+
+                <div className={style.searchFeature}>
+
                 </div>
 
             </div>

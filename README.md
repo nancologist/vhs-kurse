@@ -97,6 +97,7 @@ ___
 # 2. Implementierung (Tickets)
 ## TODO 
 * __Priority: High, Next:__
+    * Add Smart Picture!
     * Add Price to Advance Search
     * Add Detailed Course CMP 
     * Change the color of CourseCards Background.
