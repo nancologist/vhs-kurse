@@ -4,8 +4,8 @@ import {connect} from 'react-redux';
 
 import style from './Search.module.css';
 import * as courseActions from "../../store/actions/course";
-import {PrettoSlider} from '../UiComponents/MaterialUi/MaterialUi';
 import SF_BarrierFree from "./SearchFeatures/BarrierFree/BarrierFree";
+import SF_Price from "./SearchFeatures/Price/Price";
 
 class Search extends Component {
     constructor(props) {
@@ -52,21 +52,14 @@ class Search extends Component {
                 <div className={style.searchFeature}>
                     <CourseAmountFilter value={this.state.courseAmount} changed={this.changeCourseAmount}/>
                 </div>
-
                 <div className={[style.searchFeature, style.barrierFree].join(' ')}>
                     <SF_BarrierFree
                         accessible={this.props.accessible}
                         changed={this.toggleUiSwitch}
                     />
                 </div>
-
                 <div className={style.searchFeature}>
-                    <label>Preis</label>
-                    <PrettoSlider
-                        valueLabelDisplay="auto"
-                        aria-label="pretto slider"
-                        defaultValue={[20, 50]}
-                    />
+                    <SF_Price/>
                 </div>
 
             </div>
