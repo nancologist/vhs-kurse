@@ -2,7 +2,6 @@ import React, {Component} from "react";
 import CourseCard from "../../components/Course/CourseCard";
 import Spinner from "../../components/UiComponents/Spinner/Spinner";
 import {connect} from 'react-redux';
-import * as courseActions from '../../store/actions/course';
 
 class Courses extends Component {
     // constructor(props) {
