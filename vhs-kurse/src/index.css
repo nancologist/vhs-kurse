@@ -21,7 +21,7 @@ input[type=number] {
 :root {
     --primary-color: #05386b;
     --secondary-color: #5cdb95;
-    --tertiary-color: #8ee4af;
+    --secondary-light-color: #8ee4af;
 }
 
 body {

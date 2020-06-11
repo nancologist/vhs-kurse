@@ -1,9 +1,21 @@
 import React, {Component} from "react";
 import CourseAmountFilter from "./SearchFeatures/CourseAmountFilter/CourseAmountFilter";
-import style from './Search.module.css';
 import {connect} from 'react-redux';
-import * as courseActions from "../../store/actions/course";
+
 import {Switch as UiSwitch} from '@material-ui/core';
+import {green} from '@material-ui/core/colors'
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+
+import style from './Search.module.css';
+import * as courseActions from "../../store/actions/course";
+
+const myTheme = createMuiTheme({
+    palette: {
+        primary: {
+            main: '#5cdb95'
+        }
+    }
+});
 
 class Search extends Component {
     constructor(props) {
@@ -56,10 +68,13 @@ class Search extends Component {
 
                 <div className={[style.searchFeature, style.barrierFree].join(' ')}>
                     <label>Barrierefrei</label>
-                    <UiSwitch
-                        checked={this.props.accessible}
-                        onChange={this.toggleUiSwitch}
-                    />
+                    <ThemeProvider theme={myTheme}>
+                        <UiSwitch
+                            color={"primary"}
+                            checked={this.props.accessible}
+                            onChange={this.toggleUiSwitch}
+                        />
+                    </ThemeProvider>
                 </div>
 
                 <div className={style.searchFeature}>
