@@ -45,31 +45,31 @@ const reducer = (state = initialState, action) => {
                 accessible: false,
             };
         }
+    }
 
-        if (action.type === 'FILTER_PRICE_RANGE') {
-            const [range1, range2] = action.priceRanges;
-            if (range2 > range1) {
-                // if (state.filteredCourses.length > 0) {}
-                const updatedCourses = state.courses.filter(course => {
-                    return +course.preis.betrag >= range1 && +course.preis.betrag <= range2;
-                });
+    if (action.type === 'FILTER_PRICE_RANGE') {
+        const [range1, range2] = action.priceRanges;
+        if (range2 > range1) {
+            // if (state.filteredCourses.length > 0) {}
+            const updatedCourses = state.courses.filter(course => {
+                return +course.preis.betrag >= range1 && +course.preis.betrag <= range2;
+            });
 
-                return {
-                    ...state,
-                    filteredCourses: updatedCourses,
-                    amount: updatedCourses.length,
-                };
-            } else {
-                const updatedCourses = state.courses.filter(course => {
-                    return +course.preis.betrag < range1 && +course.preis.betrag >= range2;
-                });
+            return {
+                ...state,
+                filteredCourses: updatedCourses,
+                amount: updatedCourses.length,
+            };
+        } else {
+            const updatedCourses = state.courses.filter(course => {
+                return +course.preis.betrag < range1 && +course.preis.betrag >= range2;
+            });
 
-                return {
-                    ...state,
-                    filteredCourses: updatedCourses,
-                    amount: updatedCourses.length,
-                };
-            }
+            return {
+                ...state,
+                filteredCourses: updatedCourses,
+                amount: updatedCourses.length,
+            };
         }
     }
 
