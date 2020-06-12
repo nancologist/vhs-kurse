@@ -1,9 +1,9 @@
 import {Slider, Switch, withStyles} from '@material-ui/core';
 
-const colors = {
-    primary: '#05386b',
-    secondary: '#5cdb95'
-};
+// const colors = {
+//     primary: '#05386b',
+//     secondary: '#5cdb95'
+// };
 
 export const PrettoSlider = withStyles({
     root: {

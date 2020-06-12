@@ -4,8 +4,8 @@ import {connect} from 'react-redux';
 
 import style from './Search.module.css';
 import * as courseActions from "../../store/actions/course";
-import SF_BarrierFree from "./SearchFeatures/BarrierFree/BarrierFree";
-import SF_Price from "./SearchFeatures/Price/Price";
+import SFBarrierFree from "./SearchFeatures/BarrierFree/BarrierFree";
+import SFPrice from "./SearchFeatures/Price/Price";
 
 class Search extends Component {
     constructor(props) {
@@ -45,6 +45,10 @@ class Search extends Component {
         );
     };
 
+    priceSliderHandler = (event, priceRanges) => {
+        this.props.onFilterPriceRange(priceRanges);
+    };
+
     render() {
         return (
             <div>
@@ -53,13 +57,15 @@ class Search extends Component {
                     <CourseAmountFilter value={this.state.courseAmount} changed={this.changeCourseAmount}/>
                 </div>
                 <div className={[style.searchFeature, style.barrierFree].join(' ')}>
-                    <SF_BarrierFree
+                    <SFBarrierFree
                         accessible={this.props.accessible}
                         changed={this.toggleUiSwitch}
                     />
                 </div>
                 <div className={style.searchFeature}>
-                    <SF_Price/>
+                    <SFPrice
+                        onChange={this.priceSliderHandler}
+                    />
                 </div>
 
             </div>
@@ -77,7 +83,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatchAction) => {
     return {
         onFetchCourses: (amount) => dispatchAction(courseActions.fetchCourses(amount)),
-        onCheckBarrierFree: (accessible) => dispatchAction(courseActions.filterAccessibleCourses(accessible))
+        onCheckBarrierFree: (accessible) => dispatchAction(courseActions.filterAccessibleCourses(accessible)),
+        onFilterPriceRange: (priceRanges) => dispatchAction(courseActions.filterPriceRange(priceRanges))
     };
 };
 

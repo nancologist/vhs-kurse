@@ -6,7 +6,7 @@ export const fetchCourses = (amount) => {
             'veranstaltung.json?orderBy="$key"&limitToFirst=' + amount)
             .then(res => {
                 const fetchedCourses = res.data;
-                dispatchAction(fetchCoursesSuccess(fetchedCourses));
+                dispatchAction(createActionFetchCourses(fetchedCourses));
             })
             .catch(err => {
                 console.log(err);
@@ -17,22 +17,35 @@ export const fetchCourses = (amount) => {
 
 export const filterAccessibleCourses = (accessible) => {
     return (dispatchAction) => {
-        dispatchAction(filterAccessible(accessible));
+        dispatchAction(createActionFilterAccessibleCourses(accessible));
+    };
+};
+
+export const filterPriceRange = (priceRanges) => {
+    return dispatch => {
+        dispatch(createActionFilterPriceRange(priceRanges))
     };
 };
 
 // Actions ++++++++++++++++++++++++++++++++++++++++
 
-const fetchCoursesSuccess = (fetchedCourses) => {
+const createActionFetchCourses = (fetchedCourses) => {
     return {
         type: 'FETCH_COURSES',
         fetchedCourses: fetchedCourses,
     };
 };
 
-const filterAccessible = (accessible) => {
+const createActionFilterAccessibleCourses = (accessible) => {
     return {
         type: 'FILTER_ACCESSIBLE_COURSES',
         accessible: accessible,
     };
+};
+
+const createActionFilterPriceRange = (priceRanges) => {
+    return {
+        type: 'FILTER_PRICE_RANGE',
+        priceRanges: priceRanges,
+    }
 };

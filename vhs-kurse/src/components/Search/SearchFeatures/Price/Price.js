@@ -7,9 +7,11 @@ const SF_Price = (props) => {
         <div className={styles.price}>
             <label>Preis</label>
             <PrettoSlider
+                max={500}
                 valueLabelDisplay="auto"
-                aria-label="pretto slider"
-                defaultValue={[20, 50]}
+                defaultValue={[0, 500]}
+                valueLabelFormat={(x) => x + '€'}
+                onChangeCommitted={props.onChange}
             />
         </div>
     );
