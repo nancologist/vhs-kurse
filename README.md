@@ -97,17 +97,10 @@ ___
 # 2. Implementierung (Tickets)
 ## TODO 
 * __Priority: High, Next:__
-    * Kostenlos Option
-    * Add Smart Picture!
-    * Add Price to Advance Search
     * Add Detailed Course CMP 
-    * Change the color of CourseCards Background.
-    * Bigger font size for the CourseCards.
     * For formatting the decimal numbers in German, use the following built-in JS function: [.toLocalString()](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString)
-    * Add Redux (and with Redux Pass the Amount of Loaded Courses (now = 10) from ``Courses`` cmp to the ``Search`` SideBar cmp.)
     * Add "Load-More" BTN : So when the User clicks on it, 5 more courses get loaded.
     * Detail-BTN on the Course-Cards and Creating DetailedCourse CMP with all the details of the course.
-    * Einen angebrachten Text für die Home-Seite.
 
 * __Priority: Low__
     * Add Images to course-cards
@@ -115,6 +108,10 @@ ___
     * Add favourite fonts.
 
 * __DONE:__  
+    * Einen angebrachten Text für die Home-Seite.
+    * Change the color of CourseCards Background.
+    * Bigger font size for the CourseCards.
+    * Add Price to Advance Search
     * Big Showcase as homepage!!!
     * Create primary cmps.
     * Cards & Card anlegen
