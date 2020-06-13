@@ -61,20 +61,6 @@ const reducer = (state = initialState, action) => {
     return state;
 };
 
-// const searchFilters = [
-//     {
-//         type: 'BARRIER_FREE',
-//         isBarrierFree: true, // or false
-//     },
-//     {
-//         type: 'PRICE_RANGE',
-//         range: {
-//             min: 5,
-//             max: 10,
-//         }
-//     }
-// ];
-
 const updateCoursesAndSearchFilters = (state, updatedCourses, action) => {
     const updateSearchFilters = state.searchFilters.filter(searchFilter => searchFilter.type !== action.type);
     updateSearchFilters.forEach(searchFilter => {
