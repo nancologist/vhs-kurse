@@ -38,14 +38,14 @@ const createActionFetchCourses = (fetchedCourses) => {
 
 const actionAccessibleCourses = (accessible) => {
     return {
-        type: 'FILTER_ACCESSIBLE_COURSES',
+        type: 'BARRIER_FREE',
         accessible: accessible,
     };
 };
 
 const createActionFilterPriceRange = (priceRange) => {
     return {
-        type: 'FILTER_PRICE_RANGE',
+        type: 'PRICE_RANGE',
         priceRange: priceRange,
     }
 };
