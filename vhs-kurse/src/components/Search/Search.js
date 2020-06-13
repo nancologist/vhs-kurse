@@ -41,7 +41,20 @@ class Search extends Component {
         // console.log(event.target.checked)
     };
 
-    priceSliderHandler = (event, priceRange) => {
+    priceSliderHandler = (event, [val1, val2]) => {
+        let priceRange;
+        if (val2 >= val1) {
+            priceRange = {
+                min: val1,
+                max: val2,
+            }
+        } else {
+            priceRange = {
+                min: val2,
+                max: val1,
+            }
+        }
+
         this.props.onFilterPriceRange(priceRange);
     };
 

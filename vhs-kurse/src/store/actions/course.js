@@ -15,9 +15,9 @@ export const fetchCourses = (amount) => {
     };
 };
 
-export const filterAccessibleCourses = (accessible) => {
+export const filterAccessibleCourses = (barrierFree) => {
     return (dispatchAction) => {
-        dispatchAction(actionAccessibleCourses(accessible));
+        dispatchAction(actionAccessibleCourses(barrierFree));
     };
 };
 
@@ -36,10 +36,10 @@ const createActionFetchCourses = (fetchedCourses) => {
     };
 };
 
-const actionAccessibleCourses = (accessible) => {
+const actionAccessibleCourses = (barrierFree) => {
     return {
         type: 'BARRIER_FREE',
-        accessible: accessible,
+        barrierFree: barrierFree,
     };
 };
 
