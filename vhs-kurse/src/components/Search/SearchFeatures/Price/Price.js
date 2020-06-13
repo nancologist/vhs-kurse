@@ -7,9 +7,9 @@ const SF_Price = (props) => {
         <div className={styles.price}>
             <label>Preis</label>
             <PrettoSlider
-                max={500}
+                max={300}
                 valueLabelDisplay="auto"
-                defaultValue={[0, 500]}
+                defaultValue={[0, 300]}
                 valueLabelFormat={(x) => x + '€'}
                 onChangeCommitted={props.onChange}
             />

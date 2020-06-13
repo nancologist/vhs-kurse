@@ -21,9 +21,9 @@ export const filterAccessibleCourses = (accessible) => {
     };
 };
 
-export const filterPriceRange = (priceRanges) => {
+export const filterPriceRange = (priceRange) => {
     return dispatch => {
-        dispatch(createActionFilterPriceRange(priceRanges))
+        dispatch(createActionFilterPriceRange(priceRange))
     };
 };
 
@@ -43,9 +43,9 @@ const actionAccessibleCourses = (accessible) => {
     };
 };
 
-const createActionFilterPriceRange = (priceRanges) => {
+const createActionFilterPriceRange = (priceRange) => {
     return {
         type: 'FILTER_PRICE_RANGE',
-        priceRanges: priceRanges,
+        priceRange: priceRange,
     }
 };

@@ -4,6 +4,7 @@ const initialState = {
     courses: [],
     filteredCourses: [],
     activeFilters: [],
+    coursesBackup: [],
     loading: true,
     amount: 100,
     accessible: false,
@@ -33,7 +34,9 @@ const reducer = (state = initialState, action) => {
 
     if (action.type === 'FILTER_ACCESSIBLE_COURSES') {
         if (action.accessible) {
-            if (state.filteredCourses.length > 0) {
+            if (state.coursesBackup.length > 0) {
+                return getAccessibleCourses(state, 'coursesBackup');
+            } else if (state.filteredCourses.length > 0) {
                 return getAccessibleCourses(state, 'filteredCourses');
             } else {
                 return getAccessibleCourses(state, 'courses');
@@ -49,28 +52,12 @@ const reducer = (state = initialState, action) => {
     }
 
     if (action.type === 'FILTER_PRICE_RANGE') {
-        const [range1, range2] = action.priceRanges;
-        if (range2 > range1) {
-            // if (state.filteredCourses.length > 0) {}
-            const updatedCourses = state.courses.filter(course => {
-                return +course.preis.betrag >= range1 && +course.preis.betrag <= range2;
-            });
-
-            return {
-                ...state,
-                filteredCourses: updatedCourses,
-                amount: updatedCourses.length,
-            };
+        if (state.coursesBackup.length > 0) {
+            return getCoursesInPriceRange(state, 'coursesBackup', action.priceRange);
+        } else if (state.filteredCourses.length > 0) {
+            return getCoursesInPriceRange(state, 'filteredCourses', action.priceRange);
         } else {
-            const updatedCourses = state.courses.filter(course => {
-                return +course.preis.betrag < range1 && +course.preis.betrag >= range2;
-            });
-
-            return {
-                ...state,
-                filteredCourses: updatedCourses,
-                amount: updatedCourses.length,
-            };
+            return getCoursesInPriceRange(state, 'courses', action.priceRange);
         }
     }
 
@@ -86,9 +73,25 @@ const getAccessibleCourses = (state, courseArr) => {
         ...state,
         filteredCourses: filteredCourses,
         coursesBackup: [...state[courseArr]],
-        activeFilters: [...state.activeFilters, 'accessible'],
+        activeFilters: [...state.activeFilters, {type:'accessible'}],
         amount: filteredCourses.length,
         accessible: true,
+    };
+};
+
+const getCoursesInPriceRange = (state, courseArr, priceRange) => {
+    console.log(priceRange);
+    const [range1, range2] = priceRange;
+    const updatedCourses = state[courseArr].filter(course => {
+        return +course.preis.betrag >= range1 && +course.preis.betrag <= range2;
+    });
+
+    return {
+        ...state,
+        filteredCourses: updatedCourses,
+        coursesBackup: [...state[courseArr]],
+        activeFilters: [...state.activeFilters, {type: 'priceRange', min: range1, max: range2}],
+        amount: updatedCourses.length,
     };
 };
 

@@ -41,8 +41,8 @@ class Search extends Component {
         // console.log(event.target.checked)
     };
 
-    priceSliderHandler = (event, priceRanges) => {
-        this.props.onFilterPriceRange(priceRanges);
+    priceSliderHandler = (event, priceRange) => {
+        this.props.onFilterPriceRange(priceRange);
     };
 
     render() {
@@ -80,7 +80,7 @@ const mapDispatchToProps = (dispatchAction) => {
     return {
         onFetchCourses: (amount) => dispatchAction(courseActions.fetchCourses(amount)),
         onCheckBarrierFree: (accessible) => dispatchAction(courseActions.filterAccessibleCourses(accessible)),
-        onFilterPriceRange: (priceRanges) => dispatchAction(courseActions.filterPriceRange(priceRanges))
+        onFilterPriceRange: (priceRange) => dispatchAction(courseActions.filterPriceRange(priceRange))
     };
 };
 
