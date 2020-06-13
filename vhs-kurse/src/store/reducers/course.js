@@ -26,6 +26,7 @@ const reducer = (state = initialState, action) => {
         return {
             ...state,
             courses: updatedCourses,
+            amount: updatedCourses.length,
             loading: false,
             filteredCourses: [],
             activeFilters: [],
