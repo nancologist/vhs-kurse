@@ -5,7 +5,7 @@ const initialState = {
     filteredCourses: [],
     searchFilters: [],
     loading: true,
-    amount: 10,
+    amount: 100,
     accessible: false,
 };
 
