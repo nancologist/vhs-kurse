@@ -6,7 +6,7 @@ const initialState = {
     activeFilters: [],
     coursesBackup: [],
     loading: true,
-    amount: 100,
+    amount: 10,
     accessible: false,
 };
 
@@ -34,28 +34,27 @@ const reducer = (state = initialState, action) => {
     }
 
     if (action.type === 'FILTER_ACCESSIBLE_COURSES') {
+        console.log(state.coursesBackup);
         if (action.accessible) {
-            if (state.coursesBackup.length > 0) {
-                return getAccessibleCourses(state, 'coursesBackup');
-            } else if (state.filteredCourses.length > 0) {
+            if (state.filteredCourses.length > 0) {
                 return getAccessibleCourses(state, 'filteredCourses');
             } else {
                 return getAccessibleCourses(state, 'courses');
             }
         } else {
-            return {
-                ...state,
-                filteredCourses: [],
-                amount: state.courses.length,
-                accessible: false,
-            };
+            if (state.coursesBackup.length > 0) {
+                return {
+                    ...state,
+                    filteredCourses: [...state.coursesBackup],
+                    amount: state.coursesBackup.length,
+                    accessible: false,
+                };
+            }
         }
     }
 
     if (action.type === 'FILTER_PRICE_RANGE') {
-        if (state.coursesBackup.length > 0) {
-            return getCoursesInPriceRange(state, 'coursesBackup', action.priceRange);
-        } else if (state.filteredCourses.length > 0) {
+        if (state.filteredCourses.length > 0) {
             return getCoursesInPriceRange(state, 'filteredCourses', action.priceRange);
         } else {
             return getCoursesInPriceRange(state, 'courses', action.priceRange);
@@ -66,22 +65,21 @@ const reducer = (state = initialState, action) => {
 };
 
 const getAccessibleCourses = (state, courseArr) => {
-    const filteredCourses = state[courseArr].filter(course => {
+    const updatedCourses = state[courseArr].filter(course => {
         return course.veranstaltungsort.barrierefrei === 'true';
     });
 
     return {
         ...state,
-        filteredCourses: filteredCourses,
+        filteredCourses: updatedCourses,
         coursesBackup: [...state[courseArr]],
         activeFilters: [...state.activeFilters, {type:'accessible'}],
-        amount: filteredCourses.length,
+        amount: updatedCourses.length,
         accessible: true,
     };
 };
 
 const getCoursesInPriceRange = (state, courseArr, priceRange) => {
-    console.log(priceRange);
     const [range1, range2] = priceRange;
     const updatedCourses = state[courseArr].filter(course => {
         return +course.preis.betrag >= range1 && +course.preis.betrag <= range2;

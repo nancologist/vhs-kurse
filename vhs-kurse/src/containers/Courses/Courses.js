@@ -4,37 +4,7 @@ import Spinner from "../../components/UiComponents/Spinner/Spinner";
 import {connect} from 'react-redux';
 
 class Courses extends Component {
-    // constructor(props) {
-    //     super(props);
-    //     // this.getData();
-    // }
-
-    // state = {
-    //     courses: [],
-    //     loading: true,
-    // };
-
-    // This function will be moved to Redux:
-    // getData = () => {
-    //     axios.get('https://vhs-kurse.firebaseio.com/veranstaltungen/veranstaltung.json?orderBy="$key"&limitToFirst=100')
-    //         .then(res => {
-    //             let updatedCourses = res.data;
-    //             updatedCourses = updatedCourses.map( course => {
-    //                 return {
-    //                     ...course,
-    //                     beginn_datum: this.randomStartDate(),
-    //                 }
-    //             });
-    //             this.setState({courses: updatedCourses, loading: false});
-    //         })
-    //         .catch(err => {
-    //             console.log(err);
-    //             this.setState({loading: false})
-    //         });
-    // };
-
     formatStartDate = (startDate) => {
-        // "2021-04-21"
         const monthNames = [
             'Januar', 'Februar', 'März',
             'April', 'Mai', 'Juni',
