@@ -34,38 +34,34 @@ class Courses extends Component {
             );
         }
 
-        let toRenderCourses = this.props.courses;
-        if (this.props.filteredCourses.length > 0) {
-            toRenderCourses = this.props.filteredCourses;
-        }
-
         return (
-            toRenderCourses.map(course => {
-                // const desc = course.text.find(text => text.eigenschaft === 'Beschreibung').text;
-                return (
-                    <CourseCard
-                        key={course.guid}
-                        id={course.guid}
-                        title={course.name}
-                        caption={course.untertitel}
+            this.props.filteredCourses.length > 0 ?
+                this.props.filteredCourses.map(course => {
+                    // const desc = course.text.find(text => text.eigenschaft === 'Beschreibung').text;
+                    return (
+                        <CourseCard
+                            key={course.guid}
+                            id={course.guid}
+                            title={course.name}
+                            caption={course.untertitel}
 
-                        price={this.formatNumberInGerman(course.preis.betrag)}
-                        startDate={this.formatStartDate(course.beginn_datum)}
+                            price={this.formatNumberInGerman(course.preis.betrag)}
+                            startDate={this.formatStartDate(course.beginn_datum)}
 
-                        schoolName={course.veranstaltungsort.name}
-                        postalCode={course.veranstaltungsort.adresse.plz}
-                        city={course.veranstaltungsort.adresse.ort}
-                        street={course.veranstaltungsort.adresse.strasse}
-                    />
-                );
-            })
+                            schoolName={course.veranstaltungsort.name}
+                            postalCode={course.veranstaltungsort.adresse.plz}
+                            city={course.veranstaltungsort.adresse.ort}
+                            street={course.veranstaltungsort.adresse.strasse}
+                        />
+                    );
+                }) :
+                <h2>Kein Ergebnis für diese Suche!</h2>
         );
     }
 }
 
 const mapStateToProps = (state) => {
     return {
-        courses: state.courseReducer.courses,
         filteredCourses: state.courseReducer.filteredCourses,
         loading: state.courseReducer.loading,
     };
