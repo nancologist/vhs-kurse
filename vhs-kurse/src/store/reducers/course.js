@@ -41,7 +41,21 @@ const reducer = (state = initialState, action) => {
             searchFilters: updatedSearchFilters,
             amount: updatedCourses.length,
             accessible: action.barrierFree,
-        }
+        };
+    }
+
+    if (action.type === 'PRICE_RANGE') {
+        const {min, max} = action.priceRange;
+        const courses = state.courses.filter(course => {
+            return +course.preis.betrag >= min && +course.preis.betrag <= max;
+        });
+        const [updatedCourses, updatedSearchFilters] = updateCoursesAndSearchFilters(state, courses, action);
+        return {
+            ...state,
+            filteredCourses: updatedCourses,
+            searchFilters: updatedSearchFilters,
+            amount: updatedCourses.length,
+        };
     }
 
     return state;
@@ -68,7 +82,7 @@ const updateCoursesAndSearchFilters = (state, updatedCourses, action) => {
             updatedCourses = updatedCourses.filter(course => course.veranstaltungsort.barrierefrei === 'true');
         }
         if (searchFilter.type === 'PRICE_RANGE') {
-            const {min, max} = searchFilter.range;
+            const {min, max} = searchFilter.priceRange;
             updatedCourses = updatedCourses.filter(course => {
                 return +course.preis.betrag >= min && +course.preis.betrag <= max;
             });
