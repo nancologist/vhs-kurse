@@ -17,7 +17,7 @@ export const fetchCourses = (amount) => {
 
 export const filterAccessibleCourses = (accessible) => {
     return (dispatchAction) => {
-        dispatchAction(createActionFilterAccessibleCourses(accessible));
+        dispatchAction(actionAccessibleCourses(accessible));
     };
 };
 
@@ -36,7 +36,7 @@ const createActionFetchCourses = (fetchedCourses) => {
     };
 };
 
-const createActionFilterAccessibleCourses = (accessible) => {
+const actionAccessibleCourses = (accessible) => {
     return {
         type: 'FILTER_ACCESSIBLE_COURSES',
         accessible: accessible,

@@ -3,15 +3,19 @@ import * as util from '../../util/util';
 const initialState = {
     courses: [],
     filteredCourses: [],
+    activeFilters: [],
     loading: true,
     amount: 100,
     accessible: false,
 };
 
+// Wenn ich Accessible ausschalte , dann gucke ich ob in activeFilters was gibt
+
+// Vielleicht vor dem Accessible ON/OFF wurde schon Preise geändert... dann gucken wir if(!filtereCourses)
+
 const reducer = (state = initialState, action) => {
     if (action.type === 'FETCH_COURSES') {
-        let filteredCourses = action.fetchedCourses;
-        filteredCourses = filteredCourses.map( course => {
+        const updatedCourses = action.fetchedCourses.map( course => {
             return {
                 ...course,
                 beginn_datum: util.randomDate(),
@@ -20,23 +24,20 @@ const reducer = (state = initialState, action) => {
 
         return {
             ...state,
-            courses: filteredCourses,
+            courses: updatedCourses,
             loading: false,
+            filteredCourses: [],
+            activeFilters: [],
         }
     }
 
     if (action.type === 'FILTER_ACCESSIBLE_COURSES') {
         if (action.accessible) {
-            const filteredCourses = state.courses.filter(course => {
-                return course.veranstaltungsort.barrierefrei === 'true';
-            });
-
-            return {
-                ...state,
-                filteredCourses: filteredCourses,
-                amount: filteredCourses.length,
-                accessible: true,
-            };
+            if (state.filteredCourses.length > 0) {
+                return getAccessibleCourses(state, 'filteredCourses');
+            } else {
+                return getAccessibleCourses(state, 'courses');
+            }
         } else {
             return {
                 ...state,
@@ -74,6 +75,21 @@ const reducer = (state = initialState, action) => {
     }
 
     return state;
+};
+
+const getAccessibleCourses = (state, courseArr) => {
+    const filteredCourses = state[courseArr].filter(course => {
+        return course.veranstaltungsort.barrierefrei === 'true';
+    });
+
+    return {
+        ...state,
+        filteredCourses: filteredCourses,
+        coursesBackup: [...state[courseArr]],
+        activeFilters: [...state.activeFilters, 'accessible'],
+        amount: filteredCourses.length,
+        accessible: true,
+    };
 };
 
 export default reducer;

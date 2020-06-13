@@ -37,12 +37,8 @@ class Search extends Component {
     };
 
     toggleUiSwitch = (event) => {
-        this.setState(
-            prevState => {
-                this.props.onCheckBarrierFree(!prevState.accessible);
-                return {accessible: !prevState.accessible};
-            }
-        );
+        this.props.onCheckBarrierFree(event.target.checked);
+        // console.log(event.target.checked)
     };
 
     priceSliderHandler = (event, priceRanges) => {
@@ -56,7 +52,7 @@ class Search extends Component {
                 <div className={style.searchFeature}>
                     <CourseAmountFilter value={this.state.courseAmount} changed={this.changeCourseAmount}/>
                 </div>
-                <div className={[style.searchFeature, style.barrierFree].join(' ')}>
+                <div className={style.searchFeature}>
                     <SFBarrierFree
                         accessible={this.props.accessible}
                         changed={this.toggleUiSwitch}
