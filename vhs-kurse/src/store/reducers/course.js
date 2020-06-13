@@ -3,14 +3,14 @@ import * as util from '../../util/util';
 const initialState = {
     courses: [],
     filteredCourses: [],
-    activeFilters: [],
+    searchFilters: [],
     coursesBackup: [],
     loading: true,
     amount: 10,
     accessible: false,
 };
 
-// Wenn ich Accessible ausschalte , dann gucke ich ob in activeFilters was gibt
+// Wenn ich Accessible ausschalte , dann gucke ich ob in searchFilters was gibt
 
 // Vielleicht vor dem Accessible ON/OFF wurde schon Preise geändert... dann gucken wir if(!filtereCourses)
 
@@ -29,7 +29,7 @@ const reducer = (state = initialState, action) => {
             amount: updatedCourses.length,
             loading: false,
             filteredCourses: [],
-            activeFilters: [],
+            searchFilters: [],
         }
     }
 
@@ -42,18 +42,26 @@ const reducer = (state = initialState, action) => {
                 return getAccessibleCourses(state, 'courses');
             }
         } else {
-            if (state.coursesBackup.length > 0) {
-                return {
-                    ...state,
-                    filteredCourses: [...state.coursesBackup],
-                    amount: state.coursesBackup.length,
-                    accessible: false,
-                };
-            }
+            const updatedSearchFilters = state.searchFilters.filter(
+                searchFilter => searchFilter.type !== 'accessible'
+            );
+            return {
+                ...state,
+                filteredCourses: [...state.coursesBackup],
+                searchFilters: updatedSearchFilters,
+                amount: state.coursesBackup.length,
+                accessible: false,
+            };
         }
     }
 
     if (action.type === 'FILTER_PRICE_RANGE') {
+        const [min, max] = action.priceRange;
+        const prevRange = state.searchFilters.find(filter => filter.type === 'priceRange');
+        console.log(prevRange);
+        if (prevRange && (prevRange.min > min || prevRange.max < max)) {
+            return getCoursesInPriceRange(state, 'coursesBackup', action.priceRange);
+        }
         if (state.filteredCourses.length > 0) {
             return getCoursesInPriceRange(state, 'filteredCourses', action.priceRange);
         } else {
@@ -73,7 +81,7 @@ const getAccessibleCourses = (state, courseArr) => {
         ...state,
         filteredCourses: updatedCourses,
         coursesBackup: [...state[courseArr]],
-        activeFilters: [...state.activeFilters, {type:'accessible'}],
+        searchFilters: [...state.searchFilters, {type:'accessible'}],
         amount: updatedCourses.length,
         accessible: true,
     };
@@ -89,7 +97,7 @@ const getCoursesInPriceRange = (state, courseArr, priceRange) => {
         ...state,
         filteredCourses: updatedCourses,
         coursesBackup: [...state[courseArr]],
-        activeFilters: [...state.activeFilters, {type: 'priceRange', min: range1, max: range2}],
+        searchFilters: [...state.searchFilters, {type: 'priceRange', min: range1, max: range2}],
         amount: updatedCourses.length,
     };
 };
