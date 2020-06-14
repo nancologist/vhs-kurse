@@ -17,11 +17,11 @@ class Search extends Component {
         courseAmount: this.props.amount,
     };
 
-    // componentDidUpdate(prevProps, prevState, snapshot) {
-    //     if (this.props.amount !== prevProps.amount) {
-    //         this.setState({courseAmount: this.props.amount});
-    //     }
-    // }
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        if (this.props.amount !== prevProps.amount) {
+            this.setState({courseAmount: this.props.amount});
+        }
+    }
 
     changeCourseAmount = (event) => {
         let value = Number.parseInt(event.target.value);
@@ -36,7 +36,6 @@ class Search extends Component {
 
     toggleUiSwitch = (event) => {
         this.props.onCheckBarrierFree(event.target.checked);
-        // console.log(event.target.checked)
     };
 
     priceSliderHandler = (event, [val1, val2]) => {

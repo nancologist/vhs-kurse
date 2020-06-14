@@ -97,6 +97,7 @@ ___
 # 2. Implementierung (Tickets)
 ## TODO 
 * __Priority: High, Next:__
+    * Pagination
     * Add Detailed Course CMP 
     * For formatting the decimal numbers in German, use the following built-in JS function: [.toLocalString()](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString)
     * Add "Load-More" BTN : So when the User clicks on it, 5 more courses get loaded.
