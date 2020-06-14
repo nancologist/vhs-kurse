@@ -17,11 +17,11 @@ class Search extends Component {
         courseAmount: this.props.amount,
     };
 
-    componentDidUpdate(prevProps, prevState, snapshot) {
-        if (this.props.amount !== prevProps.amount) {
-            this.setState({courseAmount: this.props.amount});
-        }
-    }
+    // componentDidUpdate(prevProps, prevState, snapshot) {
+    //     if (this.props.amount !== prevProps.amount) {
+    //         this.setState({courseAmount: this.props.amount});
+    //     }
+    // }
 
     changeCourseAmount = (event) => {
         let value = Number.parseInt(event.target.value);
@@ -31,9 +31,7 @@ class Search extends Component {
             value = 1;
         }
         this.setState({courseAmount: value});
-        setTimeout(() => {
-            this.props.onFetchCourses(value);
-        }, 1000)
+        this.props.onFetchCourses(value);
     };
 
     toggleUiSwitch = (event) => {
