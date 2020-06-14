@@ -1,11 +1,11 @@
 import React, {Component} from "react";
-import CourseAmountFilter from "./SearchFeatures/CourseAmountFilter/CourseAmountFilter";
+import CourseAmountFilter from "../../components/SearchFeatures/CourseAmountFilter/CourseAmountFilter";
 import {connect} from 'react-redux';
 
 import style from './Search.module.css';
 import * as courseActions from "../../store/actions/course";
-import SFBarrierFree from "./SearchFeatures/BarrierFree/BarrierFree";
-import SFPrice from "./SearchFeatures/Price/Price";
+import SFBarrierFree from "../../components/SearchFeatures/BarrierFree/BarrierFree";
+import SFPrice from "../../components/SearchFeatures/Price/Price";
 
 class Search extends Component {
     constructor(props) {

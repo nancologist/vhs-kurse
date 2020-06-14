@@ -1,6 +1,6 @@
 import React from "react";
 import {createMuiTheme, ThemeProvider} from "@material-ui/core/styles";
-import {MuiSwitch} from "../../../UiComponents/MaterialUi/MaterialUi";
+import {MuiSwitch} from "../../UiComponents/MaterialUi/MaterialUi";
 import styles from './BarrierFree.module.css';
 
 const myTheme = createMuiTheme({

@@ -16,9 +16,6 @@ const home = (props) => {
                             deinen Kursen finden, dich anmelden und die Kursgebühr ganz einfach überweisen. Wenn du
                             Fragen hast, kannst du uns rund um die Uhr schreiben!
                         </p>
-                        <p>
-                            Worauf wartest du noch? Raus aus der Quarantäne!
-                        </p>
                         <Link to="/courses" className={styles.btn}>Zu Kursen</Link>
                     </div>
                 </div>

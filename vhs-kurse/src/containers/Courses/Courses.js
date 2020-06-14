@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import CourseCard from "../../components/Course/CourseCard";
+import CourseCard from "../../components/CourseCard/CourseCard";
 import Spinner from "../../components/UiComponents/Spinner/Spinner";
 import {connect} from 'react-redux';
 

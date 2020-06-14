@@ -1,5 +1,5 @@
 import React from "react";
-import {PrettoSlider} from "../../../UiComponents/MaterialUi/MaterialUi";
+import {PrettoSlider} from "../../UiComponents/MaterialUi/MaterialUi";
 import styles from './Price.module.css';
 
 const SF_Price = (props) => {
@@ -7,9 +7,9 @@ const SF_Price = (props) => {
         <div className={styles.price}>
             <label>Preis</label>
             <PrettoSlider
-                max={210}
+                max={250}
                 valueLabelDisplay="auto"
-                defaultValue={[0, 210]}
+                defaultValue={[0, 250]}
                 valueLabelFormat={(x) => x + '€'}
                 onChangeCommitted={props.onChange}
             />
