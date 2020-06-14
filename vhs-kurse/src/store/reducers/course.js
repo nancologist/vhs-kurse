@@ -1,15 +1,20 @@
+/*
+P11 TASK: DIE KOMPLIZIERTE LOGIK IST IN DER FUNCTION updateCoursesAndSearchFilters() ANGEWENDET.
+ */
+
 import * as util from '../../util/util';
 
 const initialState = {
-    courses: [],
-    filteredCourses: [],
-    searchFilters: [],
+    courses: [], // The courses which are directly fetched from Database.
+    filteredCourses: [], // The courses after applying filters by User.
+    searchFilters: [], // Store the used filters by User (*** WICHTIG FÜR TASK P11 ***)
     loading: true,
     amount: 100,
     accessible: false,
 };
 
 const reducer = (state = initialState, action) => {
+    // Set the fetched Courses from Database and Modify the "beginn_datum" of them.
     if (action.type === 'FETCH_COURSES') {
         const updatedCourses = action.fetchedCourses.map( course => {
             return {
@@ -27,9 +32,11 @@ const reducer = (state = initialState, action) => {
         }
     }
 
+    // When User switch on the "Barrierfrei" set only these Courses to State.
     if (action.type === 'BARRIER_FREE') {
         let courses;
         if (action.barrierFree) {
+            // Applying Filter for all courses before recalling the other previous filters in LINE-44 with updateCoursesAndSearchFilters().
             courses = state.courses.filter(course => course.veranstaltungsort.barrierefrei === 'true');
         } else {
             courses = state.courses;
@@ -44,8 +51,10 @@ const reducer = (state = initialState, action) => {
         };
     }
 
+    // Set only Courses to State, which have prices between the selected range by User.
     if (action.type === 'PRICE_RANGE') {
         const {min, max} = action.priceRange;
+        // Applying Filter for all courses before recalling the other previous filters in LINE-61 with updateCoursesAndSearchFilters().
         const courses = state.courses.filter(course => {
             return +course.preis.betrag >= min && +course.preis.betrag <= max;
         });
@@ -58,11 +67,15 @@ const reducer = (state = initialState, action) => {
         };
     }
 
+    // If there's no sooner "return" of the updated States in this function, return the currentState:
     return state;
 };
 
 const updateCoursesAndSearchFilters = (state, updatedCourses, action) => {
+    // Remove the data of a previously used filter, if this is the current filter.
     const updateSearchFilters = state.searchFilters.filter(searchFilter => searchFilter.type !== action.type);
+
+    // Now Loop through the other previous applied filters to not loose those other filters:
     updateSearchFilters.forEach(searchFilter => {
         if (searchFilter.type === 'BARRIER_FREE' && searchFilter.value) {
             updatedCourses = updatedCourses.filter(course => course.veranstaltungsort.barrierefrei === 'true');
@@ -75,6 +88,7 @@ const updateCoursesAndSearchFilters = (state, updatedCourses, action) => {
         }
     });
 
+    // Add the currently used filter to updatedSearchFilters Array, which later will be assigned to the State "searchFilters"
     if (action.type === 'BARRIER_FREE') {
         updateSearchFilters.push({
             type: action.type,
@@ -86,6 +100,7 @@ const updateCoursesAndSearchFilters = (state, updatedCourses, action) => {
             priceRange: action.priceRange,
         });
     }
+
     return [updatedCourses, updateSearchFilters];
 };
 
