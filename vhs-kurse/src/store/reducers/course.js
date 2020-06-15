@@ -9,7 +9,7 @@ const initialState = {
     filteredCourses: [], // The courses after applying filters by User.
     searchFilters: [], // Store the used filters by User (*** WICHTIG FÜR TASK P11 ***)
     loading: true,
-    amount: 100,
+    amount: 1367,
     accessible: false,
 };
 
