@@ -13,16 +13,6 @@ class Search extends Component {
         this.props.onFetchCourses(this.props.amount);
     }
 
-    state = {
-        courseAmount: this.props.amount,
-    };
-
-    componentDidUpdate(prevProps, prevState, snapshot) {
-        if (this.props.amount !== prevProps.amount) {
-            this.setState({courseAmount: this.props.amount});
-        }
-    }
-
     changeCourseAmount = (event) => {
         let value = Number.parseInt(event.target.value);
         if (value > 1878) {
@@ -30,7 +20,6 @@ class Search extends Component {
         } else if (value < 1) {
             value = 1;
         }
-        this.setState({courseAmount: value});
         this.props.onFetchCourses(value);
     };
 
@@ -60,7 +49,10 @@ class Search extends Component {
             <div>
                 <h1>Detailsuche</h1>
                 <div className={style.searchFeature}>
-                    <CourseAmountFilter value={this.state.courseAmount} changed={this.changeCourseAmount}/>
+                    <CourseAmountFilter
+                        value={this.props.amount}
+                        changed={this.changeCourseAmount}
+                    />
                 </div>
                 <div className={style.searchFeature}>
                     <SFBarrierFree
